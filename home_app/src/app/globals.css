@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+
+body, h1, h2, p, div, a, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: white;
+  color: black;
+  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.link, a {
+  transition: all .2s ease-in-out;
+}
+
+:root {
+  --brand-blue: linear-gradient(180deg, rgb(87,133,163) 0%, rgb(66,103,126) 100%);
+  --brand-blue-dark: rgb(66, 103, 126);
+  --brand-blue-light: rgb(168,197,217);
+  --gray-light: #e2e6ea;
+  --gray-medium: #a1a7ab;
+  --gray-dark: #565656;
+  --theme-font-family: 'Noto Sans', sans-serif;
+  --theme-accent-rgb: 191,64,64;
+  --theme-accent: rgb(var(--theme-accent-rgb));
+  --theme-main-rgb: 114,159,207;
+  --theme-main: rgb(var(--theme-main-rgb));
+  --theme-content-rgb: 40,40,40;
+  --theme-content: rgb(var(--theme-content-rgb));
+  --theme-overlay-rgb: 49,84,112;
+  --theme-overlay: rgb(var(--theme-overlay-rgb));
+  --theme-button-gradient-start-rgb: 0,139,191;
+  --theme-button-gradient-end-rgb: 0,139,191;
+  --theme-secondary-rgb: 30,25,106;
+  --theme-secondary: rgb(var(--theme-secondary-rgb));
+  --theme_background-500: #dae5ed;
+}
