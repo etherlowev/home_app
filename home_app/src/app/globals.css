@@ -16,11 +16,17 @@ body {
   font-weight: 600;
 }
 
+.font, body, button, input, select, textarea {
+  font-family: var(--theme-font-family), serif;
+}
+
 .link, a {
   transition: all .2s ease-in-out;
 }
 
 :root {
+  --theme_background-50: #fff;
+  --theme_background-100: #f3f7fa;
   --brand-blue: linear-gradient(180deg, rgb(87,133,163) 0%, rgb(66,103,126) 100%);
   --brand-blue-dark: rgb(66, 103, 126);
   --brand-blue-light: rgb(168,197,217);

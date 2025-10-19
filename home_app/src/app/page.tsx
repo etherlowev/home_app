@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
+      <Header pathName={"/"} />
       <main>
         <section>
           <h2>Welcome Message</h2>
