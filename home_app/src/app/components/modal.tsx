@@ -7,7 +7,7 @@ import "react-phone-number-input/style.css";
 interface ModalFormProps {
   isOpen: boolean;
   onClose: () => void;
-  onSend: (data: FormData) => void;
+  onSend: (data: { phone: string | undefined; topic: string; body: string; email: string; agreed: boolean }) => void;
 }
 
 interface FormData {

@@ -20,7 +20,7 @@
     word-wrap: break-word;
 }
 
-.footer-logo {
+.footerLogo {
     position: absolute;
     top: 0;
     left: 55px;
@@ -36,15 +36,6 @@
     margin-right: -15px;
 }
 
-
-*, ::before {
-    box-sizing: border-box;
-}
-
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-
 .box {
     position: relative;
     min-height: 1px;
@@ -55,81 +46,79 @@
     padding-right: 15px;
 }
 
-.footer-title {
+.footerTitle {
     margin-bottom: 20px;
     font-weight: 600;
     font-size: 18px;
     color: var(--theme-accent);
 }
 
-
-
-ol, small, ul {
+.footerMenu {
     display: block;
 }
 
-.footer-menu li:first-child {
+.footerMenu li:first-child {
     padding-top: 0;
 }
 
-.footer-menu li .footer-menu-item {
+.footerMenu li .footerMenuItem {
     display: block;
     line-height: 1.2;
     padding: 4px 0;
     color: #333;
 }
 
-.link, .link:focus, .link:hover, a, a:focus, a:hover {
+.link, .link:focus, .link:hover {
     text-decoration: none;
 }
 
-.cells::after, .clear::after, .content::after, .content_form::after, .grid::after {
+.cells::after, .clear::after, .content::after, .contentForm::after, .grid::after {
     content: "";
     display: table;
     clear: both;
 }
 
-.footer-contacts {
+.footerContacts {
     margin-right: -50px;
     margin-top: 22px;
     border-top: 1px solid rgba(var(--theme-accent-rgb),.15);
 }
 
-.footer-contacts .grid {
+.footerContacts .grid {
     margin: 0;
 }
 
-.footer-contacts .box {
+.footerContacts .box {
     padding: 0;
 }
 
-.footer-contact {
+.footerContact {
     display: inline-block;
     height: 70px;
     line-height: 70px;
 }
 
-.footer-contact-inner {
+.footerContactInner {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.3;
 }
 
-.footer-contact-title {
+.footerContactTitle {
     font-weight: 600;
     font-size: 10px;
     color: var(--theme-main);
     text-transform: uppercase;
 }
 
-.footer-contact-text {
+.footerContactText {
     font-weight: 600;
     font-size: 22px;
     cursor: pointer;
     color: #1f5d8e;
 }
 
-.footer-menu li .footer-menu-item {
+.footerMenu li .footerMenuItem {
     display: block;
     line-height: 1.2;
     padding: 4px 0;
@@ -141,11 +130,11 @@ ol, small, ul {
 }
 
 @media (max-width: 639px) {
-    .footer-contact {
+    .footerContact {
         padding: 0 15px;
     }
 
-    .footer-menus {
+    .footerMenus {
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -163,36 +152,36 @@ ol, small, ul {
 }
 
 @media (max-width: 979px) {
-    .footer-contacts {
+    .footerContacts {
         margin-top: 0;
         border-top: none;
     }
 
-    .footer-menus {
+    .footerMenus {
         border-bottom: 1px solid var(--theme_background-500);
         padding-bottom: 32px;
         padding-left: 30px;
         padding-right: 30px;
     }
 
-    .footer-contact.footer-contact-email {
+    .footerContact.footerContactEmail {
         float: none;
         border-bottom: 1px solid var(--theme_background-500);
     }
 
-    .footer-contact {
+    .footerContact {
         display: block;
         height: 66px;
         line-height: 66px;
         padding: 0 30px;
     }
 
-    .footer-contact.footer-contact-email {
+    .footerContact.footerContactEmail {
         float: none;
         border-bottom: 1px solid var(--theme_background-500);
     }
 
-    .footer-title {
+    .footerTitle {
         margin-bottom: 16px;
         margin-top: 32px;
     }
@@ -201,7 +190,7 @@ ol, small, ul {
         padding: 0;
     }
 
-    .footer-logo {
+    .footerLogo {
         display: none;
     }
 
@@ -209,40 +198,44 @@ ol, small, ul {
         padding-top: 0;
     }
 
-    .footer-contact.footer-contact-phone {
+    .footerContact.footerContactPhone {
         float: none;
         padding-right: 0;
         border-bottom: 1px solid var(--theme_background-500);
     }
 
-    .footer-contact {
+    .footerContact {
         display: block;
         height: 66px;
         line-height: 66px;
         padding: 0 30px;
     }
 
-    .footer-contacts .right {
+    .footerContacts .right {
         text-align: left;
     }
 }
 
-.footer-menu li .footer-menu-item:hover {
+.footerMenu li .footerMenuItem:hover {
     color: var(--theme-accent);
 }
 
+.footerContact.footerContactPhone {
+    padding-right: 47px;
+}
+
 @media (min-width: 980px) {
-    .box.laptop-3 {
+    .box.laptop3 {
         width: 25%;
     }
 }
 
 @media (max-width: 1279px) {
-    .footer-contacts {
+    .footerContacts {
         margin-right: -20px;
     }
 
-    .footer-contact.footer-contact-phone {
+    .footerContact.footerContactPhone {
         padding-right: 20px;
     }
 
@@ -259,19 +252,19 @@ ol, small, ul {
 }
 
 @media (min-width: 1280px) {
-    .box.desktop-3 {
+    .box.desktop3 {
         width: 25%;
     }
 
-    .box.desktop-9 {
+    .box.desktop9 {
         width: 75%;
     }
 
-    .box.laptop-4 {
+    .box.laptop4 {
         width: 33.33333333%;
     }
 
-    .box.laptop-8 {
+    .box.laptop8 {
         width: 66.66666667%;
     }
 }

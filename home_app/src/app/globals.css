@@ -1,11 +1,40 @@
 @import "tailwindcss";
 
+.link, a {
+  color: var(--theme-accent);
+  transition: all .2s ease-in-out;
+}
+
+svg {
+  display: initial;
+}
+
+.sectionText a {
+  text-decoration: underline;
+}
 
 body, h1, h2, p, div, a, button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  margin: 20px 0;
+  background: #eee;
+  border: none;
 }
 
 body {
@@ -17,22 +46,37 @@ body {
 }
 
 .font, body, button, input, select, textarea {
-  font-family: var(--theme-font-family), serif;
+  font-family: var(--theme-font-family), sans-serif;
 }
 
-.link, a {
-  transition: all .2s ease-in-out;
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+
+ol, small, ul {
+  display: block;
+}
+
+ol, ul {
+  list-style-type: none;
 }
 
 :root {
   --theme_background-50: #fff;
   --theme_background-100: #f3f7fa;
+  --theme_background-200: #f6f8fb;
+  --theme_background-300: #edf1f7;
+  --theme_background-400: #e9eef5;
+  --theme_background-500: #dae5ed;
   --brand-blue: linear-gradient(180deg, rgb(87,133,163) 0%, rgb(66,103,126) 100%);
   --brand-blue-dark: rgb(66, 103, 126);
   --brand-blue-light: rgb(168,197,217);
   --gray-light: #e2e6ea;
   --gray-medium: #a1a7ab;
   --gray-dark: #565656;
+  --text-light: #fff;
+  --text-dark: #333;
   --theme-font-family: 'Noto Sans', sans-serif;
   --theme-accent-rgb: 191,64,64;
   --theme-accent: rgb(var(--theme-accent-rgb));
@@ -46,5 +90,9 @@ body {
   --theme-button-gradient-end-rgb: 0,139,191;
   --theme-secondary-rgb: 30,25,106;
   --theme-secondary: rgb(var(--theme-secondary-rgb));
-  --theme_background-500: #dae5ed;
+  --theme_onAccent: var(--text-light);
+  --theme_onPrimary: var(--text-light);
+  --theme_onPrimaryVariant: var(--text-light);
+  --theme_onSecondary: var(--text-light);
+  --theme_onBackground: var(--text-dark);
 }
