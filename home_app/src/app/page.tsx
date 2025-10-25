@@ -1,18 +1,22 @@
 "use client";
 
+import React, { useState } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
-import React, { useState } from 'react';
-import './globals.css'
+import Modal from './components/modal';
 import styles from "./index.module.css";
-import applestore from '../../public/img/apple-store-badge.svg';
-import googlestore from '../../public/img/google-play-badge.svg';
+import './globals.css'
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
 
-  const handleSend = (data: any) => {
-    console.log("Form submitted with data:", data);
+  const handleSubmit = async (topic: string, email:string, body:string, phone:string | undefined, agreed:boolean) => {
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({topic, email, body, phone, agreed}),
+    });
+    await response.json();
     setModalOpen(false);
   };
 
@@ -29,7 +33,9 @@ export default function Home() {
               <div className={styles.startBlockBtn}>
                 <button className={`${styles.button} ${styles.cBtn} ${styles.cBtnLg} ${styles.cBtnPrimary} ${styles.cBtnBlock}`}
                         data-modal="#emailModal"
-                        data-payload="{ &quot;title&quot;: &quot;Отправить обращение&quot; }">
+                        data-payload="{ &quot;title&quot;: &quot;Отправить обращение&quot; }"
+                        onClick={() => setModalOpen(true)}
+                >
                   Отправить обращение
                 </button>
               </div>
@@ -925,44 +931,13 @@ export default function Home() {
               </div>
             </div>
           </section>
-
-          <div id="emailConfirmModal" className={`${styles.cModal}`} data-component="email-confirm-modal">
-            <div className={`${styles.cModalBackdrop} ${styles.uFadeHalfEnter}`} data-ref="backdrop">
-            </div>
-            <div className={`${styles.cModalWrapper}`}>
-              <div className={`${styles.cModalDialog} ${styles.uModalEnter}`} data-ref="dialog">
-                <div className={`${styles.cModalHeader}`}>
-                  <span className={`${styles.cModalHeaderTitle}`}>Обратная связь</span>
-                  <button type="button" className={`${styles.button}`} data-ref="close-btn">
-                    <svg className={`${styles.cModalHeaderClose}`} aria-hidden="true" focusable="false"
-                         data-prefix="fas"
-                         data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
-                      <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19
-                                0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48
-                                0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48
-                                0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28
-                                256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28
-                                12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28
-                                32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
-                    </svg>
-                  </button>
-                </div>
-                <hr className={`${styles.cModalBand}`}/>
-                <div className={`${styles.cModalContent}`}>
-                  Ваше сообщение успешно отправлено. Мы свяжемся с вами в самое ближайшее время.
-                </div>
-                <hr className={`${styles.cModalBand}`}/>
-                <div className={`${styles.cModalFooter}`}>
-                  <button type="button" className={`${styles.button} ${styles.btnSuccess}`} data-ref="cancel-btn">
-                    понятно
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
         </main>
       </div>
       <Footer/>
+      <Modal
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+          onSend={e => handleSubmit(e.topic, e.email, e.body, e.phone, e.agreed)}/>
     </div>
   );
 }

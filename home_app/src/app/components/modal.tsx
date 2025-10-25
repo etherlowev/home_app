@@ -1,21 +1,14 @@
 "use client";
 import React, { useState, FC } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import styles from "./modal.module.css";
+import { motion, AnimatePresence } from "motion/react";
 
 interface ModalFormProps {
   isOpen: boolean;
   onClose: () => void;
   onSend: (data: { phone: string | undefined; topic: string; body: string; email: string; agreed: boolean }) => void;
-}
-
-interface FormData {
-  topic: string;
-  body: string;
-  phone: string;
-  email: string;
-  agreed: boolean;
 }
 
 const backdropVariants = {
@@ -40,179 +33,198 @@ const ModalForm: FC<ModalFormProps> = ({ isOpen, onClose, onSend }) => {
   const handleSend = () => {
     if (!agreed) {
       alert("You must agree to the privacy policy.");
-      return;
     }
-    onSend({ topic, body, phone, email, agreed });
+    else {
+      onSend({topic, email, body, phone, agreed});
+    }
   };
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          className="backdrop"
-          variants={backdropVariants}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          style={styles.backdrop}
-          onClick={onClose}
-        >
+      <AnimatePresence>
+        {isOpen && (
           <motion.div
-            className="modal"
-            variants={modalVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            style={styles.modal}
-            onClick={(e) => e.stopPropagation()}
+              id="emailModal"
+              className={`${styles.cModal} 
+              ${isOpen ? styles.isOpened : ''}`}
+              data-component="email-modal"
+              variants={backdropVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
           >
-            <h2>Отправить обращение</h2>
-            <label>
-              Тема обращения:
-              <input
-                type="text"
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-                style={styles.input}
-                placeholder="Введите тему обращения"
-              />
-            </label>
-            <label>
-              Текст обращения:
-              <textarea
-                value={body}
-                onChange={(e) => setBody(e.target.value)}
-                style={styles.textarea}
-                placeholder="Введите текст Вашего обращения"
-              />
-            </label>
-            <label>
-              Номер телефона:
-              <PhoneInput
-                placeholder="+7 (123) 456-78-90"
-                value={phone}
-                defaultCountry="RU"
-                onChange={setPhone}
-                countries={["RU"]}
-                style={styles.input}
-              />
-            </label>
-            <label>
-              Адрес электронной почты:
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                style={styles.input}
-                placeholder="Введите Ваш адрес электронной почты"
-              />
-            </label>
-            <label style={styles.checkboxLabel}>
-              <input
-              type="checkbox"
-              checked={agreed}
-              onChange={(e) => setAgreed(e.target.checked)}
-              style={styles.checkbox}
-              />
-              Я даю согласие на обработку персональных данных.
-              <a href="/privacy" style={styles.a}>Политика работы с персональными данными</a>
-            </label>
-            <div style={styles.buttonRow}>
-              <button onClick={onClose} style={styles.cancelButton}>
-                Отмена
-              </button>
-              <button onClick={handleSend} style={styles.sendButton}>
-                Отправить
-              </button>
+            <div
+                className={`${styles.cModalBackdrop} ${styles.uFadeHalfEnter} ${styles.uFadeHalfEnterActive} ${styles.uFadeHalfLeave} ${styles.uFadeHalfLeaveActive} ${styles.uFadeHalfEnterTo}`}
+                data-ref="backdrop">
+            </div>
+            <motion.div
+                className={`${styles.cModalWrapper}`}
+                variants={modalVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            >
+              <div className={`${styles.cModalDialog} ${styles.uModalEnterTo}`} data-ref="dialog">
+                <form id="email-form" data-ref="form" noValidate={false}>
+                  <div className={`${styles.cModalHeader}`}>
+                    <span className={`${styles.cModalHeaderTitle}`} data-ref="title">Отправить обращение</span>
+                    <button type="button" data-ref="close-btn" onClick={onClose}>
+                      <svg
+                          className={`${styles.cModalHeaderClose}`}
+                          aria-hidden="true"
+                          focusable="false"
+                          data-prefix="fas"
+                          data-icon="times"
+                          role="img"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 352 512"
+                      >
+                        <path fill="currentColor"
+                              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19
+                              0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48
+                              0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48
+                              0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28
+                              256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28
+                              12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28
+                              32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                  <hr className={`${styles.cModalBand}`}/>
+                  <div className={`${styles.cModalComment}`} data-ref="comment">
+                    <span className={`${styles.cModalLabel}`}>Тема сообщения</span>
+                    <input
+                        className={`${styles.cModalInput}`}
+                        type="topic"
+                        id="topic"
+                        form="email-form"
+                        placeholder="Введите тему Вашего сообщения"
+                        value={topic}
+                        onChange={(e) => setTopic(e.target.value)}
+                    />
+                    <span className={`${styles.cModalTextDanger}`}
+                          data-ref="error-text">Тема сообщения слишком короткая
+                    </span>
+                  </div>
+                  <div className={`${styles.cModalComment}`} data-ref="comment">
+                    <span className={`${styles.cModalLabel}`}>Текст сообщения</span>
+                    <textarea
+                        className={`${styles.cModalCommentMessage}`}
+                        name="comment"
+                        id="comment"
+                        cols={20}
+                        placeholder="Введите текст Вашего сообщения"
+                        form="email-form"
+                        value={body}
+                        onChange={(e) => setBody(e.target.value)}
+                    />
+                    <span
+                        className={`${styles.cModalTextDanger}`}
+                        data-ref="error-text"
+                    >
+                      Текст сообщения слишком короткий
+                    </span>
+                  </div>
+                  <div className={`${styles.cModalContainer}`} data-ref="phone-number" data-mask="phoneNumber">
+                    <PhoneInput
+                        className={`${styles.cModalInput}`}
+                        placeholder="+7 (123) 456-78-90"
+                        value={phone}
+                        defaultCountry="RU"
+                        onChange={setPhone}
+                        countries={["RU"]}
+                    />
+                  </div>
+                  <div className={`${styles.cModalContainer}`} data-ref="email-address">
+                    <span className={`${styles.cModalLabel}`}>Адрес электронной почты</span>
+                    <input
+                        className={`${styles.cModalInput}`}
+                        type="email"
+                        id="mail"
+                        form="email-form"
+                        placeholder="Введите Ваш адрес электронной почты"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <span className={`${styles.cModalTextDanger}`} data-ref="error-email">
+                      Неверный формат электронной почты
+                    </span>
+                  </div>
+                  <hr className={`${styles.cModalBand}`}/>
+                  <div className={`${styles.cModalFooter}`}>
+                    <span className={`${styles.cModalPolicy}`} data-ref="policy">
+                      <div className={`${styles.cModalPolicyWrapper}`}>
+                          <input
+                              className={`${styles.cModalCheckbox}`}
+                              type="checkbox"
+                              checked={agreed}
+                              onChange={(e) => setAgreed(e.target.checked)}
+                          />
+                          <p className={`${styles.cModalPolicyText}`}>
+                            Я даю согласие на обработку персональных данных.
+                            <a className={`${styles.cModalPolicyLink}`} target="_blank" href="/policy">
+                              Политика работы с&nbsp;персональными данными
+                            </a>
+                          </p>
+                      </div>
+                      <span className={`${styles.cModalTextDanger}`} data-ref="error-policy">
+                            Необходимо ознакомиться с политикой конфиденциальности
+                      </span>
+                    </span>
+                    <div>
+                      <button
+                          className={`${styles.btnClose}`}
+                          type="button"
+                          onClick={onClose}
+                      >
+                        отмена
+                      </button>
+                      <button className={`${styles.btnSuccess}`} type="button" onClick={handleSend}>
+                        отправить
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </motion.div>
+            <div id="emailConfirmModal" className={`${styles.cModal}`} data-component="email-confirm-modal">
+              <div className={`${styles.cModalBackdrop} ${styles.uFadeHalfEnter}`} data-ref="backdrop">
+              </div>
+              <div className={`${styles.cModalWrapper}`}>
+                <div className={`${styles.cModalDialog} ${styles.uModalEnter}`} data-ref="dialog">
+                  <div className={`${styles.cModalHeader}`}>
+                    <span className={`${styles.cModalHeaderTitle}`}>Обратная связь</span>
+                    <button type="button" className={`${styles.button}`} data-ref="close-btn">
+                      <svg className={`${styles.cModalHeaderClose}`} aria-hidden="true" focusable="false"
+                           data-prefix="fas"
+                           data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
+                        <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19
+                                    0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48
+                                    0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48
+                                    0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28
+                                    256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28
+                                    12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28
+                                    32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <hr className={`${styles.cModalBand}`}/>
+                  <div className={`${styles.cModalContent}`}>
+                    Ваше сообщение успешно отправлено. Мы свяжемся с вами в самое ближайшее время.
+                  </div>
+                  <hr className={`${styles.cModalBand}`}/>
+                  <div className={`${styles.cModalFooter}`}>
+                    <button type="button" className={`${styles.button} ${styles.btnSuccess}`} data-ref="cancel-btn">
+                      понятно
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+        )}
+      </AnimatePresence>
   );
 };
-
-const styles = {
-  backdrop: {
-    position: "fixed" as const,
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: "rgba(0,0,0,0.5)",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    zIndex: 1000,
-  },
-  modal: {
-    backgroundColor: "#fff",
-    padding: 20,
-    borderRadius: 8,
-    width: "800px",
-    maxWidth: "180vw",
-    maxHeight: "80vh",
-    overflowY: "auto" as const,
-    boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
-  },
-  input: {
-    width: "100%",
-    padding: "8px",
-    margin: "4px 0 12px",
-    border: "gray",
-    borderStyle: "solid",
-    borderWidth: "1px",
-    borderRadius: "4px",
-    boxSizing: "border-box" as const,
-  },
-  textarea: {
-    width: "100%",
-    height: "80px",
-    padding: "8px",
-    margin: "4px 0 12px",
-    border: "gray",
-    borderStyle: "solid",
-    borderWidth: "1px",
-    borderRadius: "4px",
-    boxSizing: "border-box" as const,
-  },
-  checkbox: {
-    marginRight: "0.5em",
-  },
-  checkboxLabel: {
-    display: "flex",
-    alignItems: "center",
-    marginBottom: 20,
-    userSelect: "none" as const,
-  },
-  buttonRow: {
-    display: "flex",
-    justifyContent: "flex-end",
-    gap: 15,
-  },
-  sendButton: {
-    backgroundColor: "#57bc69",
-    color: "white",
-    border: "none",
-    padding: "8px 16px",
-    borderRadius: "9px",
-    cursor: "pointer",
-  },
-  cancelButton: {
-    backgroundColor: "#ffffff",
-    color: "light-gray",
-    border: "gray",
-    borderStyle: "solid",
-    padding: "8px 16px",
-    borderRadius: "9px",
-    borderWidth: "2.5px",
-    cursor: "pointer",
-  },
-  a: {
-    textDecoration: "none",
-    color: "#bf4040",
-  }
-};
-
 export default ModalForm;

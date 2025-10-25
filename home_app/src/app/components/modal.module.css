@@ -1,0 +1,215 @@
+.cModal {
+    display: none;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: auto;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 110px);
+    box-sizing: border-box;
+    z-index: 50;
+    padding: 20px;
+    font-family: var(--theme-font-family), sans-serif;
+}
+
+.isOpened {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.cModalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #131313;
+    opacity: .5;
+}
+
+.cModalWrapper {
+    margin: auto;
+}
+
+.uModalEnterTo, .uModalLeave {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.cModalDialog {
+    display: block;
+    background-color: #fff;
+    color: #333;
+    border-style: none;
+    border-radius: 6px;
+    width: 558px;
+    max-width: 100%;
+    min-height: 150px;
+    overflow: hidden;
+}
+
+.cModal .cModalHeader {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 26px;
+}
+
+.cModal .cModalHeaderTitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.cModal .cModalHeaderClose {
+    width: 20px;
+    height: 20px;
+    color: #c8d6e0;
+    cursor: pointer;
+}
+
+.cModal .cModalBand {
+    width: 100%;
+    background: #d6dfeb;
+    margin: 0;
+}
+
+.cModal .cModalComment {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 22px 26px 12px;
+}
+
+.cModal .cModalLabel {
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+
+.cModal .cModalCommentMessage {
+    width: 100%;
+    border-radius: 4px;
+    padding: 12px 15px;
+    height: 165px;
+    border: 1px solid #d6dfeb;
+}
+
+.cModal .cModalTextDanger {
+    display: none;
+    margin-top: 4px;
+    color: #fd3951;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.cModal .cModalContainer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 0 26px 26px;
+}
+
+.cModal .cModalInput {
+    border-radius: 4px;
+    height: 38px;
+    padding-left: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 1px solid #d6dfeb;
+    width: 100%;
+}
+
+.cModal .cModalBand {
+    width: 100%;
+    background: #d6dfeb;
+    margin: 0;
+}
+
+.cModal .cModalFooter {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 22px;
+    padding: 0 28px 22px;
+}
+
+.cModal .cModalPolicy {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 249px;
+    font-family: var(--theme-font-family), sans-serif;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #332a2a;
+}
+
+.cModal .cModalPolicyWrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.cModal .cModalCheckbox {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid #d6dfeb;
+}
+
+.cModal .cModalPolicyText {
+    opacity: .52;
+}
+
+.cModal .cModalPolicyLink {
+    text-decoration: none;
+    color: var(--theme-accent);
+}
+
+.cModal .btnClose, .cModal .btnSuccess {
+    height: 40px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cModal .btnClose {
+    border-radius: 6px;
+    border: 1px solid #d6dfeb;
+    width: 101px;
+    color: #c1ccdb;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.cModal .btnSuccess {
+    background: #0bbf5e;
+    border-radius: 6px;
+    color: #fff;
+    width: 130px;
+    cursor: pointer;
+}
+.cModal .btnClose, .cModal .btnSuccess {
+    height: 40px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+}

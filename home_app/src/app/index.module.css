@@ -8,7 +8,7 @@
 
 .startBlock {
     color: #fff;
-    background-image: url(https://176428.selcdn.ru/RosKvartal.CDN/Front.Assets/9709062349/images/f14b30d9-5275-4cc1-8d30-519b9f1e15e7.jpg)
+    background-image: url('/img/main-background.jpg')
 }
 
 .startBlock.startBlockMain {
@@ -466,7 +466,6 @@ body, body > .page {
 }
 
 .sectionTitle {
-    
     margin-bottom: 35px;
     line-height: 1.3;
     font-weight: 700;
@@ -500,24 +499,6 @@ body, body > .page {
     font-weight: 500;
 }
 
-.cModal {
-    display: none;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    overflow: auto;
-    position: fixed;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    height: calc(100% - 110px);
-    box-sizing: border-box;
-    z-index: 50;
-    padding: 20px;
-    font-family: var(--theme-font-family), sans-serif;
-}
-
 .cModalBackdrop {
     position: fixed;
     top: 0;
@@ -529,7 +510,6 @@ body, body > .page {
 }
 
 .cModalWrapper {
-    
     margin: auto;
 }
 

@@ -11,6 +11,7 @@
     "accordion-js": "^3.4.1",
     "motion": "^12.23.24",
     "next": "15.5.4",
+    "nodemailer": "^7.0.10",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-phone-number-input": "^3.4.12",

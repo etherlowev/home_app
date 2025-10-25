@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./header.module.css"
+import logo from "../assets/logo.png"
 
 interface HeaderProps {
   /** Active nav element */
@@ -34,8 +35,9 @@ function Header ({pathName}: HeaderProps ) {
           <div className={`${styles.uDFlex} ${styles.uFlexGrow}`}>
             <a href="/" className={styles.logo} data-ref="logo">
               <img
-                  src="https://176428.selcdn.ru/RosKvartal.CDN/Front.Assets/9709062349/images/9d578d6c-9d37-46ac-a380-4c391374fb40.jpg"
-                  alt="ООО УК &quot;Горизонт&quot;" className={styles.logoIcon}/>
+                  src="/img/logo.png"
+                  alt="ООО УК &quot;Горизонт&quot;" className={styles.logoIcon}
+              />
             </a>
             <nav className={styles.mainMenu} data-ref="main-menu">
               <ul className={styles.uDFlex} data-ref="main-menu-list">
