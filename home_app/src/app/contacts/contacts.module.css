@@ -1,0 +1,240 @@
+.page .pageContent, body > .page {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+body, body > .page {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.page {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.pageContent {
+    background-color: var(--theme_background-200);
+}
+
+.contactsPage .page {
+    font-family: var(--theme-font-family), sans-serif;
+    background-color: rgba(var(--theme-overlay-rgb),.02);
+    padding-bottom: 45px;
+}
+
+.pageHeader {
+    padding-top: 80px;
+}
+
+.contactsPage .pageHeader {
+    font-family: var(--theme-font-family), sans-serif;
+    padding: 43px 30px 35px;
+}
+
+.content {
+    width: 100%;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 55px;
+    padding-right: 55px;
+    word-wrap: break-word;
+}
+
+.cells::before, .clear::before, .content::before, .contentForm::before, .grid::before {
+    content: "";
+    display: table;
+}
+
+::after, ::before {
+    box-sizing: border-box;
+}
+
+.contactsPage .pageHeaderWrapper {
+    padding: 0 52px 0 56px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.contactsPage .pageHeaderTitle {
+    font-size: 36px;
+}
+
+.featureIcon {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    max-height: 100px;
+    max-width: 100%;
+}
+
+.contactsPage .section {
+    padding-top: 10px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    font-style: normal;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.contactsPage .cCard {
+    padding: 0 56px 44px 52px;
+}
+
+.contactsPage .mainContentCard {
+    padding-top: 38px;
+}
+
+.cCard {
+    font-family: var(--theme-font-family), sans-serif;
+    background-color: var(--theme_background-50);
+    color: var(--theme_onBackground);
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px #e2e7ee;
+}
+
+.contactsPage .wrapper {
+    padding: 0;
+}
+
+.contactsPage .sectionTitle {
+    font-size: 18px;
+}
+
+.contactsPage .innerWrapper {
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.contactsPage .contentBlock, .contactsPage .mapBlock {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.contactsPage .contentBlock {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    margin-right: 64px;
+}
+
+.contactsPage .blockTitle {
+    padding-top: 25px;
+    padding-bottom: 11px;
+    color: var(--theme-main);
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.contactsPage .contactsList, .contactsPage .scheduleList {
+    line-height: 24px;
+    font-size: 13px;
+}
+
+.contactsPage .contactsListListItem, .contactsPage .scheduleListListItem {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.contactsPage .blockText, .contactsPage .contactsListListItemColorPrimary, .contactsPage .scheduleListListItemColorPrimary {
+    color: var(--theme-accent);
+}
+
+.contactsPage .contactsList, .contactsPage .scheduleList {
+    line-height: 24px;
+    font-size: 13px;
+}
+
+.contactsPage .mapBlockMap {
+    width: 430px;
+    height: 367px;
+    margin-top: 26px;
+}
+
+@media (max-width: 639px) {
+    .contactsPage .mapBlockMap {
+        width: 291px;
+        height: 141px;
+    }
+}
+
+@media (min-width: 640px) {
+    .cCard {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 639px) {
+    .contactsPage .pageHeader {
+        padding: 14px 0 16px 21px;
+    }
+
+    .contactsPage .content {
+        padding: 0;
+    }
+
+    .contactsPage .cCard {
+        padding: 38px 15px 25px;
+    }
+
+    .contactsPage .contentBlock {
+        margin-right: 0;
+    }
+
+    .contactsPage .pageHeaderWrapper {
+        padding: 0;
+    }
+
+    .contactsPage .pageHeaderTitle {
+        font-size: 22px;
+    }
+
+    .contactsPage .contactsListListItem {
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .featureIcon {
+        height: 50px;
+    }
+
+    .section {
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 979px) {
+    .content {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
