@@ -59,29 +59,12 @@ function Header ({pathName}: HeaderProps ) {
               </ul>
             </nav>
             <div className={styles.mainMenuRestWrap} data-ref="main-menu-rest">
-              <div className={styles.mainMenuRestItem} data-ref="main-menu-rest-item-btn">
+              <div>
                 <svg className={styles.mainMenuRestIcon} width="16" height="4" viewBox="0 0 16 4" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                   <path
                       d="M12.5 2C12.5 2.8125 13.1875 3.5 14 3.5C14.8125 3.5 15.5 2.8125 15.5 2C15.5 1.1875 14.8125 0.5 14 0.5C13.1875 0.5 12.5 1.1875 12.5 2ZM3.5 2C3.5 1.1875 2.8125 0.5 2 0.5C1.1875 0.5 0.5 1.1875 0.5 2C0.5 2.8125 1.1875 3.5 2 3.5C2.8125 3.5 3.5 2.8125 3.5 2ZM9.5 2C9.5 1.1875 8.8125 0.5 8 0.5C7.1875 0.5 6.5 1.1875 6.5 2C6.5 2.8125 7.1875 3.5 8 3.5C8.8125 3.5 9.5 2.8125 9.5 2Z"></path>
                 </svg>
-              </div>
-              <div className={styles.mainMenuRestItems} data-ref="main-menu-rest-items">
-                <div className={styles.mainMenuRestItem}>
-                  <a href="/" className={styles.active}>Главная</a>
-                </div>
-                <div className={styles.mainMenuRestItem}>
-                  <a href="/news" className={""}>Новости</a>
-                </div>
-                <div className={styles.mainMenuRestItem}>
-                  <a href="/about-company" className="">Компания</a>
-                </div>
-                <div className={styles.mainMenuRestItem}>
-                  <a href="/for-tenants" className="">Жителям</a>
-                </div>
-                <div className={styles.mainMenuRestItem}>
-                  <a href="/contacts" className="">Контакты</a>
-                </div>
               </div>
             </div>
           </div>
@@ -108,7 +91,7 @@ function Header ({pathName}: HeaderProps ) {
                   </div>
                 </div>
               </div>
-              <a href="https://lk.gorizont-yk.stack-divo.ru" className={styles.accountBtn} data-ref="account-btn">
+              <a href="https://lk.tsj-vatytina.stack-divo.ru" className={styles.accountBtn} data-ref="account-btn">
                 <svg className={styles.accountBtnLkSvg} width="18" height="18" fill="none"
                      xmlns="http://www.w3.org/2000/svg">
                   <path fill="var(--theme-accent)"
@@ -169,7 +152,7 @@ function Header ({pathName}: HeaderProps ) {
             </div>
           </div>
         </div>
-        <a href="https://lk.gorizont-yk.stack-divo.ru" className={styles.accountBtn}>
+        <a href="https://lk.tsj-vatytina.stack-divo.ru" className={styles.accountBtn}>
           <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill="var(--theme-accent)"
                   d="M9 0C4.05 0 0 4.05 0 9s4.05 9 9 9 9-4.05 9-9-4.05-9-9-9zm0 2.7c1.53 0 2.7 1.17 2.7 2.7 0 1.53-1.17 2.7-2.7 2.7-1.53 0-2.7-1.17-2.7-2.7 0-1.53 1.17-2.7 2.7-2.7zm0 12.78c-2.25 0-4.23-1.17-5.4-2.88 0-1.8 3.6-2.79 5.4-2.79 1.8 0 5.4.99 5.4 2.79-1.17 1.71-3.15 2.88-5.4 2.88z"></path>

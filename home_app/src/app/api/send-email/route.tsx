@@ -11,11 +11,18 @@ export async function POST(req: Request) {
             },
         });
 
-        const mailOptions = {
+        const selfMailOptions = {
             from: process.env.MAIL_USER,
             to: process.env.MAIL_USER,
-            subject: `${data.topic} от ${data.email} (номер телефона ${data.phone})`,
-            text: `${data.body}`,
+            subject: `${data.topic}`,
+            text: `Поступило обращение от ${data.email} (номер телефона: Номер телефона: ${data.phone})\n${data.body}`,
+        };
+
+        const userMailOptions = {
+            from: process.env.MAIL_USER,
+            to: `${data.email}`,
+            subject: `${data.topic}`,
+            text: `Ваше обращение принято и будет рассмотрено в ближайшее время.`,
         };
 
         try {
@@ -25,7 +32,8 @@ export async function POST(req: Request) {
                     headers: { 'Content-Type': 'application/json' },
                 });
             }
-            await transporter.sendMail(mailOptions);
+            await transporter.sendMail(selfMailOptions);
+            await transporter.sendMail(userMailOptions);
             return new Response(JSON.stringify({ message: 'Message sent successfully' }), {
                 status: 200,
                 headers: { 'Content-Type': 'application/json' },

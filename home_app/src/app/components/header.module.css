@@ -204,7 +204,7 @@
   transition: all .2s ease-in-out;
 }
 
-.headerCityWrap:hover, .headerPhoneWrap:hover, .mainMenuRestWrap:hover {
+.headerCityWrap:hover, .headerPhoneWrap:hover {
   background: var(--theme_background-100);
 }
 
@@ -313,7 +313,7 @@
   background: var(--theme_background-100);
 }
 
-.headerCityWrap:hover .headerCities, .headerCityWrap:hover .headerPhones, .headerCityWrap:hover .mainMenuRestItems, .headerPhoneWrap:hover .headerCities, .headerPhoneWrap:hover .headerPhones, .headerPhoneWrap:hover .mainMenuRestItems, .mainMenuRestWrap:hover .headerCities, .mainMenuRestWrap:hover .headerPhones, .mainMenuRestWrap:hover .mainMenuRestItems {
+.headerCityWrap:hover .headerCities, .headerCityWrap:hover .headerPhones, .headerCityWrap:hover .mainMenuRestItems, .headerPhoneWrap:hover .headerCities, .headerPhoneWrap:hover .headerPhones, .headerPhoneWrap:hover .mainMenuRestItems, .mainMenuRestWrap:hover .headerCities, .mainMenuRestWrap:hover .headerPhones {
   opacity: 1;
   visibility: visible;
 }
