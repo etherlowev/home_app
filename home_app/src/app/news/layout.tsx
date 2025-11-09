@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Политика кофниденциальности",
-  description: "",
+  title: "Новости |",
+  description: "Новости",
 };
 
 export default function RootLayout({

@@ -45,13 +45,13 @@ function Header ({pathName}: HeaderProps ) {
                   <a href="/" className={selectedNav("/")}>Главная</a>
                 </li>
                 <li className={styles.uFlexShrink0}>
-                  <a href="/houses" className={selectedNav("/houses")}>Дома</a>
+                  <a href="/news" className={selectedNav("/news")}>Новости</a>
                 </li>
                 <li className={styles.uFlexShrink0}>
                   <a href="/about" className={selectedNav("/about")}>Компания</a>
                 </li>
                 <li className={styles.uFlexShrink0}>
-                  <a href="/news" className={selectedNav("/news")}>Жителям</a>
+                  <a href="/for-tenants" className={selectedNav("/for-tenants")}>Жителям</a>
                 </li>
                 <li className={styles.uFlexShrink0}>
                   <a href="/contacts" className={selectedNav("/contacts")}>Контакты</a>
@@ -71,13 +71,13 @@ function Header ({pathName}: HeaderProps ) {
                   <a href="/" className={styles.active}>Главная</a>
                 </div>
                 <div className={styles.mainMenuRestItem}>
-                  <a href="/houses" className={""}>Дома</a>
+                  <a href="/news" className={""}>Новости</a>
                 </div>
                 <div className={styles.mainMenuRestItem}>
                   <a href="/about-company" className="">Компания</a>
                 </div>
                 <div className={styles.mainMenuRestItem}>
-                  <a href="/section/51433" className="">Жителям</a>
+                  <a href="/for-tenants" className="">Жителям</a>
                 </div>
                 <div className={styles.mainMenuRestItem}>
                   <a href="/contacts" className="">Контакты</a>
@@ -141,9 +141,9 @@ function Header ({pathName}: HeaderProps ) {
         <nav className={styles.mainMenu}>
           <ul>
             <li><a href="/" className={styles.active}>Главная</a></li>
-            <li><a href="/houses" className="">Дома</a></li>
+            <li><a href="/news" className="">Новости</a></li>
             <li><a href="/about-company" className="">Компания</a></li>
-            <li><a href="/section/51433" className="">Жителям</a></li>
+            <li><a href="/for-tenants" className="">Жителям</a></li>
             <li><a href="/contacts" className="">Контакты</a></li>
           </ul>
         </nav>

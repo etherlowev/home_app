@@ -7,45 +7,43 @@ const Footer: React.FC = (): JSX.Element => {
   <footer className={styles.footer}>
     <div className={styles.content}>
       <div className={styles.footerMenus}>
-        <img
-            src="https://176428.selcdn.ru/RosKvartal.CDN/Front.Assets/9709062349/images/9d578d6c-9d37-46ac-a380-4c391374fb40.jpg"
-            alt="" className={styles.footerLogo}/>
+        <img src="/img/logo.png" alt="logo" className={styles.footerLogo}/>
         <div className={styles.grid}>
           <div className={`${styles.box} ${styles.laptop3}`}>
             <h4 className={styles.footerTitle}>О компании</h4>
             <ul className={styles.footerMenu}>
               <li>
-                <a href="/about-company" className={styles.footerMenuItem}>
+                <a href="/about" className={styles.footerMenuItem}>
                   Лицензии и контакты
                 </a>
               </li>
               <li>
-                <a href="/about-company" className={styles.footerMenuItem}>
+                <a href="/about" className={styles.footerMenuItem}>
                   Контактная информация
                 </a>
               </li>
               <li>
-                <a href="/about-company" className={styles.footerMenuItem}>
+                <a href="/about" className={styles.footerMenuItem}>
                   Уставные документы
                 </a>
               </li>
               <li>
-                <a href="/about-company" className={styles.footerMenuItem}>
+                <a href="/about" className={styles.footerMenuItem}>
                   Наша история
                 </a>
               </li>
               <li>
-                <a href="/about-company" className={styles.footerMenuItem}>
+                <a href="/about" className={styles.footerMenuItem}>
                   Первые лица
                 </a>
               </li>
               <li>
-                <a href="/about-company" className={styles.footerMenuItem}>
+                <a href="/about" className={styles.footerMenuItem}>
                   Реквизиты
                 </a>
               </li>
               <li>
-                <a href="/section/51438" className={styles.footerMenuItem}>
+                <a href="/vacancies" className={styles.footerMenuItem}>
                   Вакансии
                 </a>
               </li>
@@ -120,12 +118,12 @@ const Footer: React.FC = (): JSX.Element => {
             <h4 className={styles.footerTitle}>Документы</h4>
             <ul className={styles.footerMenu}>
               <li>
-                <a href="/page/51428" className={styles.footerMenuItem}>
+                <a href="/privacy" className={styles.footerMenuItem}>
                   Политика конфиденциальности
                 </a>
               </li>
               <li>
-                <a href="/page/51429" className={styles.footerMenuItem}>
+                <a href="/user-agreement" className={styles.footerMenuItem}>
                   Пользовательское соглашение
                 </a>
               </li>

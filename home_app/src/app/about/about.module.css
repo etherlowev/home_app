@@ -1,0 +1,521 @@
+.page .pageContent, body > .page {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+body, body > .page {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.page {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.page .pageContent, body > .page {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.aboutCompanyPage {
+    padding-bottom: 45px;
+    background-color: rgba(var(--theme-overlay-rgb),.02);
+}
+
+.aboutCompanyPage .pageAbout {
+    background-color: #fff;
+}
+
+.aboutCompanyPage .pageAboutHeader {
+    padding-top: 42px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.aboutCompanyPage .pageAboutHeaderHeadline {
+    font-size: 36px;
+    line-height: 46px;
+}
+
+.aboutCompanyPage .pageAboutContent {
+    padding: 42px 0;
+}
+
+.aboutCompanyPage .block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.pageContent {
+    background-color: var(--theme_background-200);
+}
+
+.oTypographer {
+    --space: 4px;
+    font-size: 16px;
+}
+
+.oTypographer > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.oTypographer b, .oTypographer strong {
+     font-weight: 700;
+ }
+
+.oTypographer > * + * {
+    margin-top: var(--space);
+}
+
+.aboutCompanyPage .ac:first-child {
+    margin-top: 16px;
+}
+
+.aboutCompanyPage .ac {
+    margin-top: 8px;
+}
+
+
+.ac {
+    margin-top: 10px;
+    border-width: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.aboutCompanyPage .ac > .acQ {
+    padding: 18px 15px;
+    margin-right: 18px;
+}
+
+.ac > .acQ {
+    padding: 0;
+    margin: 0;
+    font-family: var(--theme-font-family), sans-serif;
+    font-style: normal;
+}
+.ac > .acQ {
+    font: 700 15px Arial,sans-serif;
+    font-style: normal;
+    font-family: Arial, sans-serif;
+    color: #111;
+    padding: 10px 30px 10px 10px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+.aboutCompanyPage .title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.acA {
+    height: 0;
+}
+
+.ac > .acA {
+    overflow: hidden;
+    transition-duration: 600ms;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
+
+.aboutCompanyPage .pageRequisites {
+    padding-top: 10px;
+}
+
+.aboutCompanyPage .wrapperSmall {
+    width: 100%;
+    max-width: 1170px;
+    margin-bottom: 24px;
+}
+
+.aboutCompanyPage .pageRequisitesContainer {
+    background: #fff;
+    box-shadow: 0 2px 4px #e2e7ee;
+    border-radius: 6px;
+    padding: 38px 52px;
+}
+
+.aboutCompanyPage .pageRequisitesTitle {
+    padding-bottom: 26px;
+}
+
+.aboutCompanyPage .title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.aboutCompanyPage .pageRequisitesBlock {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.aboutCompanyPage .pageRequisitesContent {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.aboutCompanyPage .pageRequisitesContentText {
+    color: var(--theme-accent);
+    line-height: 24px;
+    font-weight: 500;
+    -ms-flex-preferred-size: 240px;
+    flex-basis: 240px;
+    margin-right: 44px;
+}
+
+.aboutCompanyPage .pageRequisitesContentDesc {
+    line-height: 24px;
+    font-weight: 500;
+    -ms-flex-preferred-size: 507px;
+    flex-basis: 507px;
+    white-space: pre-line;
+}
+
+.aboutCompanyPage .pageRequisitesBlockBtn {
+    border: 1px solid rgba(var(--theme-accent-rgb),.15);
+    border-radius: 6px;
+    width: 185px;
+    height: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    color: var(--theme-main);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.link, .link:focus, .link:hover {
+    text-decoration: none;
+}
+
+.link {
+    color: var(--theme-accent);
+    transition: all .2s ease-in-out;
+}
+
+.uMAuto {
+    margin: auto;
+}
+
+.aboutCompanyPage .ac:last-child {
+    margin-bottom: 0;
+}
+
+.aboutCompanyPage .ac {
+    margin-top: 8px;
+}
+
+.aboutCompanyPage .pageRequisites {
+    padding-top: 10px;
+}
+
+.aboutCompanyPage .wrapperSmall {
+    width: 100%;
+    max-width: 1170px;
+    margin-bottom: 24px;
+}
+
+.aboutCompanyPage .pageRequisitesContainer {
+    background: #fff;
+    box-shadow: 0 2px 4px #e2e7ee;
+    border-radius: 6px;
+    padding: 38px 52px;
+}
+
+.aboutCompanyPage .pageDocuments {
+    padding-bottom: 0;
+}
+
+.aboutCompanyPage .wrapperSmall {
+    width: 100%;
+    max-width: 1170px;
+    margin-bottom: 24px;
+}
+
+.aboutCompanyPage .pageDocumentsTitle {
+    padding-top: 48px;
+    padding-bottom: 18px;
+}
+
+.aboutCompanyPage .titleBig {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.cDocumentsInner {
+    display: block;
+}
+
+.cDocumentsContainer {
+    background: #fff;
+    box-shadow: 0 2px 4px #e2e7ee;
+    border-radius: 6px;
+    padding: 14px 25px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.cDocumentsContent {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.cDocumentsContentText {
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--theme-accent);
+    padding-left: 22px;
+}
+
+.cDocumentsDownload {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.cDocumentsDownloadFormat {
+    color: rgba(var(--theme-accent-rgb),.6);
+    line-height: 18px;
+    font-weight: 500;
+    padding: 0 12px;
+    white-space: nowrap;
+}
+
+.cDocumentsDownloadCircle, .cPaging {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.cDocumentsDownloadCircle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid rgba(var(--theme-accent-rgb),.6);
+    padding: 6px;
+}
+
+.ac > .acQ::after {
+    content: "" !important;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-image: url('/icon-close-cookie.svg');
+    transform: translateY(-50%) rotate(45deg) !important;
+    position: absolute;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+.ac > .acQ::after {
+    content: "+";
+    text-align: center;
+    width: 15px;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.ac0.isActive > .acA {
+    height: 680px;
+}
+
+.ac1.isActive > .acA {
+    height: 112px;
+}
+
+.aboutCompanyPage .pageDocuments {
+    padding-bottom: 0;
+}
+
+.ac.isActive > .acQ::after {
+    content: "" !important;
+    transform: translateY(-50%) rotate(0deg) !important;
+}
+
+@media (min-width: 640px) and (max-width: 979px) {
+    .aboutCompanyPage .pageDocuments {
+        padding-top: 10px;
+    }
+
+    .aboutCompanyPage .titleBig {
+        line-height: 14px;
+        font-size: 15px;
+    }
+
+    .aboutCompanyPage .pageDocumentsTitle {
+        padding: 0 0 0 15px;
+    }
+
+    .aboutCompanyPage .pageRequisitesContainer {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 639px) {
+    .aboutCompanyPage .pageAboutContent {
+        padding: 24px 0;
+    }
+
+    .aboutCompanyPage .block {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .aboutCompanyPage .title {
+        font-size: 13px;
+        line-height: 14px;
+    }
+
+    .aboutCompanyPage .pageRequisitesContainer {
+        padding: 0 15px 20px;
+    }
+
+    .aboutCompanyPage .pageRequisitesTitle {
+        padding: 18px 0 28px;
+    }
+
+    .aboutCompanyPage .title {
+        font-size: 13px;
+        line-height: 14px;
+    }
+
+    .aboutCompanyPage .pageRequisitesContent {
+        font-size: 12px;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        border-bottom: 1px solid #e2e7ee;
+        margin-bottom: 10px;
+    }
+
+    .aboutCompanyPage .pageRequisitesContentText {
+        min-width: 80px;
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        font-weight: 600;
+        line-height: 18px;
+    }
+
+    .aboutCompanyPage .pageRequisitesContentDesc {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        line-height: 18px;
+        padding: 4px 0 8px;
+    }
+
+    .aboutCompanyPage .pageRequisitesBlockBtn {
+        margin: 12px 0;
+        -ms-flex-item-align: center;
+        align-self: center;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .aboutCompanyPage .pageDocumentsTitle {
+        padding: 0;
+    }
+
+    .aboutCompanyPage .titleBig {
+        font-size: 12px;
+        padding-left: 15px;
+        line-height: 14px;
+    }
+
+    .aboutCompanyPage .cDocumentsInner {
+        margin: 0;
+    }
+
+    .aboutCompanyPage .cDocumentsContainer {
+        border-radius: 0;
+        box-shadow: none;
+        padding-bottom: 0;
+    }
+
+    .aboutCompanyPage .pageAboutHeaderHeadline {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+@media (min-width: 640px) {
+    .aboutCompanyPage .ac {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 979px) {
+    .aboutCompanyPage .pageRequisitesDesktop {
+        display: none;
+    }
+
+    .aboutCompanyPage .pageRequisitesTitle {
+        display: none;
+    }
+
+    .aboutCompanyPage .pageDocumentsDesktop {
+        display: none;
+    }
+
+    .aboutCompanyPage .cDocumentsContainerIcon svg {
+        width: 30px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 980px) {
+    .aboutCompanyPage .wrapper {
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 52px;
+    }
+
+    .aboutCompanyPage .requisitesAndDocumentsMobile {
+        display: none;
+    }
+
+    .aboutCompanyPage .wrapper {
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 52px;
+    }
+}

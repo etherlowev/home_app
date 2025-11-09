@@ -38,11 +38,10 @@ hr {
 }
 
 body {
-  background: white;
+  background: var(--theme_background-200);
   color: black;
   line-height: 1.6;
   font-size: 14px;
-  font-weight: 600;
 }
 
 .font, body, button, input, select, textarea {
@@ -60,6 +59,10 @@ ol, small, ul {
 
 ol, ul {
   list-style-type: none;
+}
+
+b, strong {
+  font-weight: 600;
 }
 
 :root {
