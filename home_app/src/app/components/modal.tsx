@@ -29,13 +29,28 @@ const ModalForm: FC<ModalFormProps> = ({ isOpen, onClose, onSend }) => {
   const [email, setEmail] = useState<string>("");
   const [agreed, setAgreed] = useState<boolean>(false);
 
-
-  const handleSend = () => {
+  const handleSend = async () => {
     if (!agreed) {
-      alert("You must agree to the privacy policy.");
+      alert("Необходимо Ваше согласие на обработку персональных данных.");
     }
     else {
-      onSend({topic, email, body, phone, agreed});
+      const sendButton = document.getElementById('send-button');
+      if (sendButton == null) {
+        return;
+      }
+      sendButton.setAttribute("disabled", 'true');
+      sendButton.classList.toggle(styles.disabled);
+      if (!isValidPhoneNumber(typeof phone === "string" ? phone : "", "RU")) {
+        sendButton.setAttribute("disabled", 'false');
+        sendButton.classList.toggle(styles.disabled);
+        alert("Номера телефона введен некорректно. Проверьте правильность введенных данных.")
+        return
+      }
+
+      await onSend({topic, email, body, phone, agreed});
+
+      sendButton.setAttribute("disabled", 'false');
+      sendButton.classList.toggle(styles.disabled);
     }
   };
 
@@ -180,7 +195,7 @@ const ModalForm: FC<ModalFormProps> = ({ isOpen, onClose, onSend }) => {
                       >
                         отмена
                       </button>
-                      <button className={`${styles.btnSuccess}`} type="button" onClick={handleSend}>
+                      <button id={'send-button'} className={`${styles.btnSuccess}`} type="button" onClick={handleSend}>
                         отправить
                       </button>
                     </div>

@@ -33,7 +33,6 @@ export default function Home() {
               <div className={styles.startBlockBtn}>
                 <button className={`${styles.button} ${styles.cBtn} ${styles.cBtnLg} ${styles.cBtnPrimary} ${styles.cBtnBlock}`}
                         data-modal="#emailModal"
-                        data-payload="{ &quot;title&quot;: &quot;Отправить обращение&quot; }"
                         onClick={() => setModalOpen(true)}
                 >
                   Отправить обращение
@@ -81,16 +80,6 @@ export default function Home() {
                       обязательно свяжутся наши диспетчеры
                     </p>
                     <br/>
-                    <p>
-                      <a href="/in-development" className={styles.serviceDecoration}>
-                        Услуги ТСЖ
-                        <svg className={styles.arrowSvg} width="10" height="7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                              d="M9.864 3.112L6.888.136a.465.465 0 0 0-.658.658l2.182 2.182H.465a.465.465 0 0 0 0 .93h7.947L6.23 6.088a.465.465 0 1 0 .658.657L9.864 3.77a.465.465 0 0 0 0-.658z"
-                              fill="var(--theme-accent)"></path>
-                        </svg>
-                      </a>
-                    </p>
                   </div>
                 </div>
                 <div className={`${styles.box} ${styles.laptop1}`}></div>
@@ -130,7 +119,7 @@ export default function Home() {
                                 fill="var(--theme-main)"></path>
                           </svg>
                           <button type="button" className={`${styles.button} ${styles.link} ${styles.serviceLink} ${styles.serviceDecoration}`} data-modal="#emailModal"
-                                  data-payload="{ &quot;title&quot;: &quot;Отправить обращение&quot; }">
+                                  onClick={() => setModalOpen(true)}>
                             Отправить<br/>обращение
                             <svg width="10" height="7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path
@@ -152,7 +141,7 @@ export default function Home() {
                                 fill="var(--theme-main)"></path>
                           </svg>
                           <button type="button" className={`${styles.button} ${styles.link} ${styles.serviceLink} ${styles.serviceDecoration}`} data-modal="#emailModal"
-                                  data-payload="{ &quot;title&quot;: &quot;Вызвать мастера&quot; }">
+                                  onClick={() => setModalOpen(true)}>
                             Вызвать <br/>мастера
                             <svg width="10" height="7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path
@@ -207,7 +196,8 @@ export default function Home() {
                                 fill="var(--theme-main)"></path>
                           </svg>
                           <button type="button" className={`${styles.button} ${styles.serviceLink} ${styles.link} ${styles.serviceDecoration}`} data-modal="#emailModal"
-                                  data-payload="{ &quot;title&quot;: &quot;Отправить отзыв&quot; }">
+                                  onClick={() => setModalOpen(true)}
+                          >
                             Отправить <br/>отзыв
                             <svg width="10" height="7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path
@@ -234,7 +224,7 @@ export default function Home() {
                                   d="M25.0262 30.4036H18.9741V32.1017H25.0262V30.4036Z" fill="var(--theme-main)"></path>
                           </svg>
                           <button type="button" className={`${styles.button} ${styles.serviceLink} ${styles.link} ${styles.serviceDecoration}`} data-modal="#emailModal"
-                                  data-payload="{ &quot;title&quot;: &quot;Передать показания&quot; }">
+                                  onClick={() => setModalOpen(true)}>
                             Передать <br/>показания
                             <svg width="10" height="7" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path
@@ -474,7 +464,8 @@ export default function Home() {
                       <div className={``}>
                         <div className={`${styles.communicationBtns}`}></div>
                         <span data-modal="#emailModal"
-                              className={`${styles.btn} ${styles.btnHollow} ${styles.communicationEmailBtn} ${styles.uWFull} ${styles.smUWAuto}`}>
+                              className={`${styles.btn} ${styles.btnHollow} ${styles.communicationEmailBtn} ${styles.uWFull} ${styles.smUWAuto}`}
+                              onClick={() => setModalOpen(true)}>
                         <svg width="24" height="15" fill="var(--theme-main)" xmlns="http://www.w3.org/2000/svg"><path
                             d="M1.899.855l8.645 5.9c.392.267.932.386 1.457.363.523.022 1.064-.096 1.456-.363L22.1.855c.693-.47.536-.855-.343-.855H2.244c-.88 0-1.036.385-.345.855z"
                             fill="var(--theme-accent)"></path><path
@@ -500,7 +491,7 @@ export default function Home() {
                           </p>
                         </div>
                       </div>
-                      <div className={`${styles.feature} ${styles.tablet6}`}>
+                      <div className={`${styles.box} ${styles.tablet6}`}>
                         <div className={`${styles.right}`}>
                           <div className={`${styles.featureIconWrap}`}>
                             <svg className={`${styles.featureIcon}`} width="100" viewBox="0 0 100 100" fill="none"
@@ -512,8 +503,8 @@ export default function Home() {
                                   fill="rgba(var(--theme-accent-rgb), .15)"></path>
                             </svg>
                           </div>
-                          <button type="button" className={`${styles.button} ${styles.btn} ${styles.btnHollow}`} data-modal="#emailModal"
-                                  data-payload="{ &quot;title&quot;: &quot;Заказать услуги&quot; }">
+                          <button type="button" className={`${styles.button} ${styles.btn} ${styles.btnHollow} ${styles.uWFull}`} data-modal="#emailModal"
+                                  onClick={() => setModalOpen(true)}>
                             Заказать услуги
                           </button>
                         </div>
@@ -552,7 +543,7 @@ export default function Home() {
                             </svg>
                           </div>
                           <button type="button" className={`${styles.button} ${styles.btn} ${styles.btnHollow} ${styles.uWFull} ${styles.smUWAuto}`} data-modal="#emailModal"
-                                  data-payload="{ &quot;title&quot;: &quot;Сообщить о проблеме&quot; }">
+                                  onClick={() => setModalOpen(true)}>
                             Сообщить о проблеме
                           </button>
                         </div>
@@ -891,7 +882,7 @@ export default function Home() {
                           <button type="button"
                                   className={`${styles.button} ${styles.btn} ${styles.btnHollow} ${styles.uWFull} ${styles.smUWAuto}`}
                                   data-modal="#emailModal"
-                                  data-payload="{ &quot;title&quot;: &quot;Оставить отзыв&quot; }">
+                                  onClick={() => setModalOpen(true)}>
                             Оставить отзыв
                           </button>
                         </div>

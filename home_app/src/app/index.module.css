@@ -786,4 +786,13 @@ body, body > .page {
         display: block;
         margin: 0 auto 3px;
     }
+
+    .feature .box, .feature .grid {
+        position: static;
+    }
+
+    .feature .btn.btnHollow {
+        display: block;
+        margin-top: 10px;
+    }
 }

@@ -206,13 +206,15 @@
     color: #fff;
     width: 130px;
     cursor: pointer;
+    transition-duration: 0.5ms;
 }
 
-.cModal .btnClose, .cModal .btnSuccess {
-    height: 40px;
-    font-style: normal;
-    font-weight: 700;
-    text-transform: uppercase;
+
+.disabled {
+    transition-duration: 0.5ms;
+    background: #808080;
+    opacity: 10%;
+    cursor: none;
 }
 
 @media (max-width: 639px) {
