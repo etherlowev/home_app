@@ -770,6 +770,7 @@ body, body > .page {
 
     .service {
         margin-bottom: 30px;
+        padding-top: 3px;
     }
 
     .box {
