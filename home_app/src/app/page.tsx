@@ -83,7 +83,7 @@ export default function Home() {
                     <br/>
                     <p>
                       <a href="/in-development" className={styles.serviceDecoration}>
-                        Услуги нашей УК
+                        Услуги ТСЖ
                         <svg className={styles.arrowSvg} width="10" height="7" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                               d="M9.864 3.112L6.888.136a.465.465 0 0 0-.658.658l2.182 2.182H.465a.465.465 0 0 0 0 .93h7.947L6.23 6.088a.465.465 0 1 0 .658.657L9.864 3.77a.465.465 0 0 0 0-.658z"
@@ -260,7 +260,7 @@ export default function Home() {
               <div className={styles.grid}>
                 <div className={`${styles.box} ${styles.desktop5} ${styles.laptop5}`}>
                   <h2 className={styles.sectionTitle}>
-                    <span>Сильная команда — основа нашей УК</span>
+                    <span>Сильная команда — основа нашего ТСЖ</span>
                   </h2>
                   <div className={styles.sectionText}>
                     <p>
@@ -281,8 +281,8 @@ export default function Home() {
                     </p>
 
                     <p>
-                      <a href="/about-company">
-                        Наша компания
+                      <a href="/about">
+                        Наше ТСЖ
                         <svg className={styles.arrowSvg} width="10" height="7" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                               d="M9.864 3.112L6.888.136a.465.465 0 0 0-.658.658l2.182 2.182H.465a.465.465 0 0 0 0 .93h7.947L6.23 6.088a.465.465 0 1 0 .658.657L9.864 3.77a.465.465 0 0 0 0-.658z"

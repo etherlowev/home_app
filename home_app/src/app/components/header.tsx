@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from "./header.module.css"
-import logo from "../assets/logo.png"
 
 interface HeaderProps {
   /** Active nav element */
@@ -36,7 +35,7 @@ function Header ({pathName}: HeaderProps ) {
             <a href="/" className={styles.logo} data-ref="logo">
               <img
                   src="/img/logo.png"
-                  alt="ООО УК &quot;Горизонт&quot;" className={styles.logoIcon}
+                  alt="ТСЖ &quot;Ватутина 18-2&quot;" className={styles.logoIcon}
               />
             </a>
             <nav className={styles.mainMenu} data-ref="main-menu">
@@ -48,7 +47,7 @@ function Header ({pathName}: HeaderProps ) {
                   <a href="/news" className={selectedNav("/news")}>Новости</a>
                 </li>
                 <li className={styles.uFlexShrink0}>
-                  <a href="/about" className={selectedNav("/about")}>Компания</a>
+                  <a href="/about" className={selectedNav("/about")}>ТСЖ</a>
                 </li>
                 <li className={styles.uFlexShrink0}>
                   <a href="/for-tenants" className={selectedNav("/for-tenants")}>Жителям</a>
@@ -125,7 +124,7 @@ function Header ({pathName}: HeaderProps ) {
           <ul>
             <li><a href="/" className={styles.active}>Главная</a></li>
             <li><a href="/news" className="">Новости</a></li>
-            <li><a href="/about-company" className="">Компания</a></li>
+            <li><a href="/about" className="">ТСЖ</a></li>
             <li><a href="/for-tenants" className="">Жителям</a></li>
             <li><a href="/contacts" className="">Контакты</a></li>
           </ul>

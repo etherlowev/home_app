@@ -32,7 +32,7 @@ export default function Contacts() {
                 <section className={`${styles.pageAbout}`}>
                   <div className={`${styles.wrapper}`}>
                     <div className={`${styles.pageAboutHeader}`}>
-                      <h2 className={`${styles.pageAboutHeaderHeadline}`}>О компании ООО "УК ГОРИЗОНТ"</h2>
+                      <h2 className={`${styles.pageAboutHeaderHeadline}`}>О ТСЖ "Ватутина 18-2"</h2>
                       <div className={`${styles.pageAboutHeaderIcon}`}>
                         <svg width="91" height="91" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -49,13 +49,13 @@ export default function Contacts() {
                     </div>
                     <div className={`${styles.pageAboutContent}`}>
                       <div className={`${styles.block} ${styles.oTypographer}`}>
-                        <p dir="ltr"><strong>Уважаемые собственники и жители дома,</strong><br/><br/>ООО «УК ГОРИЗОНТ» –
-                          современная управляющая компания, которая готова стать вашим партнёром в сфере ЖКХ.<br/><br/>Мы
+                        <p dir="ltr"><strong>Уважаемые собственники и жители дома,</strong><br/><br/>ТСЖ «Ватутина 18-2» –
+                          новое товарищество собственников жилья, пришедшее на замену управляющей компании.<br/><br/>Мы
                           за то, чтобы обслуживание и содержание домов было качественным и безопасным, а услуги
                           предоставлялись своевременно и без задержек. И готовы соответствовать этим
                           требованиям.<br/><br/>Мы хотим, чтобы сфера ЖКХ была простой для людей и помогала создавать
                           комфортные условия для жизни.</p><p data-empty="true"><br/></p><p dir="ltr">Готовы к
-                        сотрудничеству. Будем рады стать вашей надёжной управляющей компанией!</p>
+                        сотрудничеству.</p>
                       </div>
                     </div>
                   </div>
@@ -76,16 +76,16 @@ export default function Contacts() {
                             <div className={`${styles.pageRequisitesBlock}`}>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>Полное наименование организации</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}></div>
+                                <div className={`${styles.pageRequisitesContentDesc}`}>Товарищество собственников жилья "Ватутина 18-2"</div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>Сокращенное наименование</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}>ООО "УК ГОРИЗОНТ"</div>
+                                <div className={`${styles.pageRequisitesContentDesc}`}>ТСЖ "Ватутина 18-2"</div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>Адрес</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}>109028, Москва г, вн.тер.г. муниципальный
-                                  округ Басманный, пер Хохловский, д. 15, помещ. 3П
+                                <div className={`${styles.pageRequisitesContentDesc}`}>121357, Москва г, вн.тер.г. муниципальный
+                                  округ Фили-Давыдково, ул. Ватутина, д. 18, к. 2, кв. 96
                                 </div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
@@ -98,15 +98,15 @@ export default function Contacts() {
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>Электронная почта</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}>ykgorizont@gmail.com</div>
+                                <div className={`${styles.pageRequisitesContentDesc}`}>tsgVatutina18-2@mail.ru</div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>ИНН</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}>9709062349</div>
+                                <div className={`${styles.pageRequisitesContentDesc}`}>7731267010</div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>КПП</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}>770901001</div>
+                                <div className={`${styles.pageRequisitesContentDesc}`}>773101001</div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>ОКВЭД</div>
@@ -118,7 +118,7 @@ export default function Contacts() {
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>ОГРН</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}>1207700199882</div>
+                                <div className={`${styles.pageRequisitesContentDesc}`}>1027731012979</div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>Банковские реквизиты</div>
@@ -190,16 +190,18 @@ export default function Contacts() {
                         <div className={`${styles.pageRequisitesBlock}`}>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>Полное наименование организации</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}></div>
+                            <div className={`${styles.pageRequisitesContentDesc}`}>Товарищество собственников жилья
+                              "Ватутина 18-2"
+                            </div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>Сокращенное наименование</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}>ООО "УК ГОРИЗОНТ"</div>
+                            <div className={`${styles.pageRequisitesContentDesc}`}>ТСЖ "Ватутина 18-2"</div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>Адрес</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}>109028, Москва г, вн.тер.г. муниципальный округ
-                              Басманный, пер Хохловский, д. 15, помещ. 3П
+                            <div className={`${styles.pageRequisitesContentDesc}`}>121357, Москва г, вн.тер.г. муниципальный
+                              округ Фили-Давыдково, ул. Ватутина, д. 18, к. 2, кв. 96
                             </div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
@@ -212,15 +214,15 @@ export default function Contacts() {
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>Электронная почта</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}>ykgorizont@gmail.com</div>
+                            <div className={`${styles.pageRequisitesContentDesc}`}>tsgVatutina18-2@mail.ru</div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>ИНН</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}>9709062349</div>
+                            <div className={`${styles.pageRequisitesContentDesc}`}>7731267010</div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>КПП</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}>770901001</div>
+                            <div className={`${styles.pageRequisitesContentDesc}`}>773101001</div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>ОКВЭД</div>
@@ -232,7 +234,7 @@ export default function Contacts() {
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>ОГРН</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}>1207700199882</div>
+                            <div className={`${styles.pageRequisitesContentDesc}`}>1027731012979</div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>Банковские реквизиты</div>
