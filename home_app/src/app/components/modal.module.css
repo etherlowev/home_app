@@ -207,9 +207,17 @@
     width: 130px;
     cursor: pointer;
 }
+
 .cModal .btnClose, .cModal .btnSuccess {
     height: 40px;
     font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+@media (max-width: 639px) {
+    .cModalDialog {
+        max-width: 100%;
+        width: 304px;
+    }
 }
