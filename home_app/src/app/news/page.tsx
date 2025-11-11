@@ -33,7 +33,7 @@ export default function Home() {
                             </p>
                           </div>
                         </div>
-                      </a><a href="/src/app/news/1" className={`${styles.cNewsCardLink}`}>
+                      </a><a href="/news/1" className={`${styles.cNewsCardLink}`}>
                       Перейти
                     </a>
                     </div>
