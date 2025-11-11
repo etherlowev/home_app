@@ -14,27 +14,12 @@ const Footer: React.FC = (): JSX.Element => {
             <ul className={styles.footerMenu}>
               <li>
                 <a href="/about" className={styles.footerMenuItem}>
-                  Лицензии и контакты
-                </a>
-              </li>
-              <li>
-                <a href="/about" className={styles.footerMenuItem}>
                   Контактная информация
                 </a>
               </li>
               <li>
                 <a href="/about" className={styles.footerMenuItem}>
                   Уставные документы
-                </a>
-              </li>
-              <li>
-                <a href="/about" className={styles.footerMenuItem}>
-                  Наша история
-                </a>
-              </li>
-              <li>
-                <a href="/about" className={styles.footerMenuItem}>
-                  Первые лица
                 </a>
               </li>
               <li>
@@ -58,58 +43,13 @@ const Footer: React.FC = (): JSX.Element => {
                 </a>
               </li>
               <li>
-                <a href="/in-development" className={styles.footerMenuItem}>
-                  Оплатить ЖКУ онлайн
-                </a>
-              </li>
-              <li>
-                <a href="/in-development" className={styles.footerMenuItem}>
-                  Оплатить ЖКУ без комиссии
-                </a>
-              </li>
-              <li>
-                <button data-dispatch-widget="recourse" className={styles.footerMenuItem}>
-                  Отправить обращение
-                </button>
-              </li>
-              <li>
-                <button data-dispatch-widget="meteringDevices" className={styles.footerMenuItem}>
+                <a href="https://lk.tsj-vatytina.stack-divo.ru" className={styles.footerMenuItem}>
                   Отправить показания
-                </button>
-              </li>
-              <li>
-                <a href="/in-development" className={styles.footerMenuItem}>
-                  Справочник жильца
                 </a>
               </li>
               <li>
-                <a href="/page/51432" className={styles.footerMenuItem}>
+                <a href="/elevator-service-company" className={styles.footerMenuItem}>
                   Информация о компании обслуживающей лифты
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className={`${styles.box} ${styles.laptop3}`}>
-            <h4 className={styles.footerTitle}>Для партнеров</h4>
-            <ul className={styles.footerMenu}>
-              <li>
-                <a href="/in-development" className={styles.footerMenuItem}>
-                  Информация для партнеров
-                </a>
-              </li>
-              <li>
-                <a href="/in-development" className={styles.footerMenuItem}>
-                  Владельцам неджвижимости
-                </a>
-              </li>
-              <li>
-                <a href="/in-development" className={styles.footerMenuItem}>
-                  Конкурсы и закупки
-                </a>
-              </li>
-              <li>
-                <a href="/in-development" className={styles.footerMenuItem}>
-                  Застройщикам
                 </a>
               </li>
             </ul>
@@ -137,7 +77,7 @@ const Footer: React.FC = (): JSX.Element => {
             <span className={`${styles.footerContact} ${styles.footerContactEmail}`}>
               <div className={styles.footerContactInner}>
                 <div className={styles.footerContactTitle}>эл.почта</div>
-                <div className={styles.footerContactText} data-modal="#emailModal">ykgorizont@gmail.com</div>
+                <div className={styles.footerContactText} data-modal="#emailModal">tsgVatutina18-2@mail.ru</div>
               </div>
             </span>
           </div>

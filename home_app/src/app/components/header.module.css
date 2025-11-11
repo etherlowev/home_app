@@ -305,6 +305,7 @@
   vertical-align: top;
   padding: 0 24px;
   border-left: 1px solid rgba(var(--theme-accent-rgb),.15);
+  border-right: 1px solid rgba(var(--theme-accent-rgb),.15);
   font-size: 14px;
   font-weight: 700;
 }
@@ -423,14 +424,6 @@ path.active {
 
 .mainMenuBtn.active::after, .mainMenuBtnCloseSvg {
   display: none;
-}
-
-.accountBtnBlind {
-  border-right: 1px solid rgba(var(--theme-accent-rgb),.15);
-}
-
-.accountBtnBlindSvg {
-  margin-left: 0 !important;;
 }
 
 @media (max-width: 979px) {

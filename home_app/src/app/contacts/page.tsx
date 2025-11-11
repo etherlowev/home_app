@@ -132,7 +132,7 @@ export default function Contacts() {
                                 Электронная почта
                               </div>
                               <div>
-                                ykgorizont@gmail.com
+                                tsgVatutina18-2@mail.ru
                               </div>
                             </li>
                           </ul>

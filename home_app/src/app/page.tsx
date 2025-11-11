@@ -295,20 +295,8 @@ export default function Home() {
                                 fill="#A5B2C4"></path>
                           </svg>
                         </div>
-                        <h5 className={styles.teammatePosition}>Генеральный директор</h5>
-                        <h4 className={styles.teammateName}>Рубинский Юрий Вячеславович</h4>
-                      </div>
-                      <div className={styles.teammate}>
-                        <div className={`${styles.teammatePic} ${styles.teammateStub}`}>
-                          <svg width="169" height="120" viewBox="0 0 600 800" fill="none"
-                               xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M324.959 408.722C316.829 408.722 313.185 413.082 300.01 413.082C286.555 413.082 282.911 408.722 274.782 408.722C254.039 408.722 237.22 425.346 237.22 445.513V456.687C237.22 464.045 243.106 469.769 250.675 469.769H349.346C356.634 469.769 362.801 464.045 362.801 456.687V445.513C362.801 425.346 345.702 408.722 324.959 408.722ZM353.831 456.687C353.831 459.14 351.589 461.048 349.346 461.048H250.675C248.152 461.048 246.19 459.14 246.19 456.687V445.513C246.19 429.979 258.804 417.443 274.782 417.443C280.388 417.443 285.714 421.803 300.01 421.803C314.026 421.803 319.633 417.443 324.959 417.443C340.937 417.443 353.831 429.979 353.831 445.513V456.687ZM300.01 400.001C319.633 400.001 335.891 384.467 335.891 365.117C335.891 346.04 319.633 330.234 300.01 330.234C280.108 330.234 264.13 346.04 264.13 365.117C264.13 384.467 280.108 400.001 300.01 400.001ZM300.01 338.955C314.587 338.955 326.921 350.946 326.921 365.117C326.921 379.561 314.587 391.28 300.01 391.28C285.154 391.28 273.1 379.561 273.1 365.117C273.1 350.946 285.154 338.955 300.01 338.955Z"
-                                fill="#A5B2C4"></path>
-                          </svg>
-                        </div>
                         <h5 className={styles.teammatePosition}>Управляющий</h5>
-                        <h4 className={styles.teammateName}>Шаров Сергей Борисович</h4>
+                        <h4 className={styles.teammateName}>Луценко Владимир Викторович</h4>
                       </div>
                       <div className={styles.teammate}>
                         <div className={`${styles.teammatePic} ${styles.teammateStub}`}>
@@ -319,20 +307,8 @@ export default function Home() {
                                 fill="#A5B2C4"></path>
                           </svg>
                         </div>
-                        <h5 className={styles.teammatePosition}>Главный инженер</h5>
-                        <h4 className={styles.teammateName}>Усольцев Роман Александрович</h4>
-                      </div>
-                      <div className={styles.teammate}>
-                        <div className={`${styles.teammatePic} ${styles.teammateStub}`}>
-                          <svg width="169" height="120" viewBox="0 0 600 800" fill="none"
-                               xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M324.959 408.722C316.829 408.722 313.185 413.082 300.01 413.082C286.555 413.082 282.911 408.722 274.782 408.722C254.039 408.722 237.22 425.346 237.22 445.513V456.687C237.22 464.045 243.106 469.769 250.675 469.769H349.346C356.634 469.769 362.801 464.045 362.801 456.687V445.513C362.801 425.346 345.702 408.722 324.959 408.722ZM353.831 456.687C353.831 459.14 351.589 461.048 349.346 461.048H250.675C248.152 461.048 246.19 459.14 246.19 456.687V445.513C246.19 429.979 258.804 417.443 274.782 417.443C280.388 417.443 285.714 421.803 300.01 421.803C314.026 421.803 319.633 417.443 324.959 417.443C340.937 417.443 353.831 429.979 353.831 445.513V456.687ZM300.01 400.001C319.633 400.001 335.891 384.467 335.891 365.117C335.891 346.04 319.633 330.234 300.01 330.234C280.108 330.234 264.13 346.04 264.13 365.117C264.13 384.467 280.108 400.001 300.01 400.001ZM300.01 338.955C314.587 338.955 326.921 350.946 326.921 365.117C326.921 379.561 314.587 391.28 300.01 391.28C285.154 391.28 273.1 379.561 273.1 365.117C273.1 350.946 285.154 338.955 300.01 338.955Z"
-                                fill="#A5B2C4"></path>
-                          </svg>
-                        </div>
-                        <h5 className={styles.teammatePosition}>Специалист по расчетам</h5>
-                        <h4 className={styles.teammateName}>Дурышева Анастасия Петровна</h4>
+                        <h5 className={styles.teammatePosition}>Председатель правления</h5>
+                        <h4 className={styles.teammateName}>Рогов Александр Александрович</h4>
                       </div>
                       <div className={styles.teammate}>
                         <div className={`${styles.teammatePic} ${styles.teammateStub}`}>
@@ -365,7 +341,7 @@ export default function Home() {
                         <div className={styles.teammateSearchBody}>
                           <h5 className={styles.teammateSearchTitle}>Ищем лучших!</h5>
 
-                          <a href="https://gorizont-yk.ru/section/51438" className={styles.teammateSearchLink}>
+                          <a href="/vacancies" className={styles.teammateSearchLink}>
                             Наши вакансии
                           </a>
                         </div>
@@ -915,7 +891,7 @@ export default function Home() {
                           14.07.2022
                         </p>
                       </div>
-                      <a href="/news/15767" className={`${styles.newLink}`}>Читать полностью</a>
+                      <a href="/news/1" className={`${styles.newLink}`}>Читать полностью</a>
                     </div>
                   </div>
                 </div>

@@ -54,8 +54,7 @@ export default function Contacts() {
                           за то, чтобы обслуживание и содержание домов было качественным и безопасным, а услуги
                           предоставлялись своевременно и без задержек. И готовы соответствовать этим
                           требованиям.<br/><br/>Мы хотим, чтобы сфера ЖКХ была простой для людей и помогала создавать
-                          комфортные условия для жизни.</p><p data-empty="true"><br/></p><p dir="ltr">Готовы к
-                        сотрудничеству.</p>
+                          комфортные условия для жизни.</p><p data-empty="true"><br/></p>
                       </div>
                     </div>
                   </div>
@@ -252,7 +251,7 @@ export default function Contacts() {
                       <div className={`${styles.pageDocumentsTitle}`}>
                         <span className={`${styles.titleBig}`}>Документы компании</span>
                       </div>
-                      <a href="/files/download/accd5aad-593c-4ebc-bd82-6037b6dafbe0" target="_blank" className={`${styles.cDocumentsInner}`}>
+                      <a href="/documents/act-ventilation.pdf" target="_blank" className={`${styles.cDocumentsInner}`}>
                         <div className={`${styles.cDocumentsContainer}`}>
                           <div className={`${styles.cDocumentsContainerIcon}`}>
                             <svg width="38" height="52" viewBox="0 0 38 52" fill="none"

@@ -97,13 +97,6 @@ function Header ({pathName}: HeaderProps ) {
                         d="M9 0C4.05 0 0 4.05 0 9s4.05 9 9 9 9-4.05 9-9-4.05-9-9-9zm0 2.7c1.53 0 2.7 1.17 2.7 2.7 0 1.53-1.17 2.7-2.7 2.7-1.53 0-2.7-1.17-2.7-2.7 0-1.53 1.17-2.7 2.7-2.7zm0 12.78c-2.25 0-4.23-1.17-5.4-2.88 0-1.8 3.6-2.79 5.4-2.79 1.8 0 5.4.99 5.4 2.79-1.17 1.71-3.15 2.88-5.4 2.88z"></path>
                 </svg>
               </a>
-              <a className={`${styles.accountBtn} ${styles.accountBtnBlind}`} href="?blind=true" data-ref="blind-btn">
-                <svg className={styles.accountBtnBlindSvg} width="24" height="24" fill="none"
-                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                  <path fill="var(--theme-accent)"
-                        d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path>
-                </svg>
-              </a>
               <div role="button" className={`${styles.mainMenuBtn } ${styles.active}`} onClick={handleClick}>
                 <div className={styles.mainMenuBtnInner}></div>
                 <svg className={styles.mainMenuBtnCloseSvg} width="20" height="20" viewBox="0 0 20 20" fill="none"
