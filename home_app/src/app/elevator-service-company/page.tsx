@@ -2,7 +2,7 @@
 
 import Header from '../components/header';
 import Footer from '../components/footer';
-import styles from "./privacy.module.css"
+import styles from "./elevator.module.css"
 import React from 'react';
 
 export default function Home() {
