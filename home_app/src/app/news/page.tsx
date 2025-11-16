@@ -26,10 +26,10 @@ export default function Home() {
                     <div className={`${styles.cNewsCard}`}>
                       <a href="/documents/info-list.pdf">
                         <div className={`${styles.cNewsCardTitle}`}>
-                          Плановое отключение ГВС с 01.08.2022 по 11.08.2022
+                          Плановое отключение ГВС с 01.08.2025 по 11.08.2025
                           <div id="description" className={`${styles.cNewsCardText}`}>
                             <p>
-                              14.07.2022
+                              14.07.2025
                             </p>
                           </div>
                         </div>

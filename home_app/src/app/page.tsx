@@ -884,11 +884,11 @@ export default function Home() {
                   <div className={`${styles.box} ${styles.tablet6} ${styles.laptop3}`}>
                     <div className={`${styles.new}`}>
                       <h3 className={`${styles.newTitle}`}>
-                        Плановое отключение ГВС с 01.08.2022 по 11.08.2022
+                        Плановое отключение ГВС с 01.08.2025 по 11.08.2025
                       </h3>
                       <div className={`${styles.newText}`}>
                         <p>
-                          14.07.2022
+                          14.07.2025
                         </p>
                       </div>
                       <a href="/news/1" className={`${styles.newLink}`}>Читать полностью</a>
