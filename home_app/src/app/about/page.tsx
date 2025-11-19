@@ -2,7 +2,8 @@
 
 import Header from '../components/header';
 import Footer from '../components/footer';
-import styles from "./about.module.css"
+import styles from "./about.module.css";
+import DocumentFile from "@/app/components/documentFile";
 import React from 'react';
 
 export default function Contacts() {
@@ -21,7 +22,6 @@ export default function Contacts() {
     }
   }
 
-
   return (
       <div>
         <Header pathName={"/about"} />
@@ -32,7 +32,7 @@ export default function Contacts() {
                 <section className={`${styles.pageAbout}`}>
                   <div className={`${styles.wrapper}`}>
                     <div className={`${styles.pageAboutHeader}`}>
-                      <h2 className={`${styles.pageAboutHeaderHeadline}`}>О ТСЖ "Ватутина 18-2"</h2>
+                      <h2 className={`${styles.pageAboutHeaderHeadline}`}>О ТСЖ "Ватутина, 18-2"</h2>
                       <div className={`${styles.pageAboutHeaderIcon}`}>
                         <svg width="91" height="91" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
@@ -49,7 +49,7 @@ export default function Contacts() {
                     </div>
                     <div className={`${styles.pageAboutContent}`}>
                       <div className={`${styles.block} ${styles.oTypographer}`}>
-                        <p dir="ltr"><strong>Уважаемые собственники и жители дома,</strong><br/><br/>ТСЖ «Ватутина 18-2» –
+                        <p dir="ltr"><strong>Уважаемые собственники и жители дома,</strong><br/><br/>ТСЖ «Ватутина, 18-2» –
                           новое товарищество собственников жилья, пришедшее на замену управляющей компании.<br/><br/>Мы
                           за то, чтобы обслуживание и содержание домов было качественным и безопасным, а услуги
                           предоставлялись своевременно и без задержек. И готовы соответствовать этим
@@ -75,11 +75,11 @@ export default function Contacts() {
                             <div className={`${styles.pageRequisitesBlock}`}>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>Полное наименование организации</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}>Товарищество собственников жилья "Ватутина 18-2"</div>
+                                <div className={`${styles.pageRequisitesContentDesc}`}>Товарищество собственников жилья "Ватутина, 18-2"</div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>Сокращенное наименование</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}>ТСЖ "Ватутина 18-2"</div>
+                                <div className={`${styles.pageRequisitesContentDesc}`}>ТСЖ "Ватутина, 18-2"</div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>Адрес</div>
@@ -92,8 +92,8 @@ export default function Contacts() {
                                 <div className={`${styles.pageRequisitesContentDesc}`}>8 495 788 45 17</div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
-                                <div className={`${styles.pageRequisitesContentText}`}>Факс</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}></div>
+                                <div className={`${styles.pageRequisitesContentText}`}>Телефон диспетчерской</div>
+                                <div className={`${styles.pageRequisitesContentDesc}`}>8 495 737 45 17</div>
                               </div>
                               <div className={`${styles.pageRequisitesContent}`}>
                                 <div className={`${styles.pageRequisitesContentText}`}>Электронная почта</div>
@@ -119,10 +119,6 @@ export default function Contacts() {
                                 <div className={`${styles.pageRequisitesContentText}`}>ОГРН</div>
                                 <div className={`${styles.pageRequisitesContentDesc}`}>1027731012979</div>
                               </div>
-                              <div className={`${styles.pageRequisitesContent}`}>
-                                <div className={`${styles.pageRequisitesContentText}`}>Банковские реквизиты</div>
-                                <div className={`${styles.pageRequisitesContentDesc}`}></div>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -139,40 +135,21 @@ export default function Contacts() {
                           <div className={`${styles.pageDocumentsTitle}`}>
                             <span className={`${styles.titleBig}`}>Документы компании</span>
                           </div>
-                          <a href="/documents/act-ventilation.pdf" target="_blank"
-                             className={`${styles.cDocumentsInner}`}>
-                            <div className={`${styles.cDocumentsContainer}`}>
-                              <div className={`${styles.cDocumentsContainerIcon}`}>
-                                <svg width="38" height="52" viewBox="0 0 38 52" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                      d="M37.7 13.897L24.104.3a1.021 1.021 0 0 0-.723-.3H4.22A4.225 4.225 0 0 0 0 4.22v43.25a4.225 4.225 0 0 0 4.22 4.22h29.56A4.225 4.225 0 0 0 38 47.47V14.62c0-.271-.108-.531-.3-.723zM24.403 3.487l10.11 10.11H26.58a2.18 2.18 0 0 1-2.177-2.176V3.488zM35.957 47.47a2.18 2.18 0 0 1-2.177 2.177H4.22a2.18 2.18 0 0 1-2.177-2.177V4.22c0-1.2.977-2.176 2.177-2.176h18.139v9.378a4.225 4.225 0 0 0 4.22 4.22h9.378V47.47z"
-                                      fill="var(--theme-main)"></path>
-                                  <path
-                                      d="M27.173 25.947H10.828a1.022 1.022 0 0 0 0 2.043h16.345a1.021 1.021 0 1 0 0-2.043zm0 4.563H10.828a1.022 1.022 0 0 0 0 2.043h16.345a1.022 1.022 0 0 0 0-2.043zm0 4.562H10.828a1.022 1.022 0 0 0 0 2.043h16.345a1.021 1.021 0 1 0 0-2.043zm-5.313 4.563H10.829a1.022 1.022 0 0 0 0 2.043h11.033a1.021 1.021 0 1 0 0-2.043z"
-                                      fill="var(--theme-main)"></path>
-                                </svg>
-                              </div>
-                              <div className={`${styles.cDocumentsContent}`}>
-                                <div className={`${styles.cDocumentsContentText}`}>
-                                  <span>
-                                    Акт обследования технического состояния вентиляции
-                                  </span>
-                                </div>
-                                <div className={`${styles.cDocumentsDownload}`}>
-                                  <span className={`${styles.cDocumentsDownloadFormat}`}>.pdf, 806,0 Кб</span>
-                                  <div className={`${styles.cDocumentsDownloadCircle}`}>
-                                    <svg viewBox="0 0 10 16" width="10" height="12" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                      <path
-                                          d="M5.533 15.047l4.215-4.215a.746.746 0 0 0 0-1.058.746.746 0 0 0-1.059 0L5.753 12.71V1.485a.752.752 0 1 0-1.505 0v11.22L1.312 9.767a.746.746 0 0 0-1.059 0 .746.746 0 0 0 0 1.058l4.215 4.215c.147.147.337.22.533.22a.74.74 0 0 0 .532-.214z"
-                                          fill="rgba(var(--theme-accent-rgb), .6)"></path>
-                                    </svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
+                          <DocumentFile documentName={'act-ventilation.pdf'}
+                                        documentTitle={'Акт обследования технического состояния вентиляции'}>
+                          </DocumentFile>
+                          <DocumentFile documentName={'heating_season_readiness_check.pdf'}
+                                        documentTitle={'Акт проверки готовности к отопительному периоду 2025/2026 гг.'}>
+                          </DocumentFile>
+                          <DocumentFile documentName={'heating_readiness_addendum.pdf'}
+                                        documentTitle={'Приложение к акту проверки готовности к отопительному периоду 2025/2026 гг.'}>
+                          </DocumentFile>
+                          <DocumentFile documentName={'thermal_energy_inspection_report.pdf'}
+                                        documentTitle={'Акт проверки узла учета тепловой энергии и теплоносителя'}>
+                          </DocumentFile>
+                          <DocumentFile documentName={'certificate_FTA.pdf'}
+                                        documentTitle={'Свидетельство о регистрации юр. лица в ФНС'}>
+                          </DocumentFile>
                         </div>
                       </section>
                     </div>
@@ -190,16 +167,17 @@ export default function Contacts() {
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>Полное наименование организации</div>
                             <div className={`${styles.pageRequisitesContentDesc}`}>Товарищество собственников жилья
-                              "Ватутина 18-2"
+                              "Ватутина, 18-2"
                             </div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>Сокращенное наименование</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}>ТСЖ "Ватутина 18-2"</div>
+                            <div className={`${styles.pageRequisitesContentDesc}`}>ТСЖ "Ватутина, 18-2"</div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>Адрес</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}>121357, Москва г, вн.тер.г. муниципальный
+                            <div className={`${styles.pageRequisitesContentDesc}`}>121357, Москва г, вн.тер.г.
+                              муниципальный
                               округ Фили-Давыдково, ул. Ватутина, д. 18, к. 2, кв. 96
                             </div>
                           </div>
@@ -208,8 +186,8 @@ export default function Contacts() {
                             <div className={`${styles.pageRequisitesContentDesc}`}>8 495 788 45 17</div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
-                            <div className={`${styles.pageRequisitesContentText}`}>Факс</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}></div>
+                            <div className={`${styles.pageRequisitesContentText}`}>Телефон диспетчерской</div>
+                            <div className={`${styles.pageRequisitesContentDesc}`}>8 495 737 45 17</div>
                           </div>
                           <div className={`${styles.pageRequisitesContent}`}>
                             <div className={`${styles.pageRequisitesContentText}`}>Электронная почта</div>
@@ -235,10 +213,6 @@ export default function Contacts() {
                             <div className={`${styles.pageRequisitesContentText}`}>ОГРН</div>
                             <div className={`${styles.pageRequisitesContentDesc}`}>1027731012979</div>
                           </div>
-                          <div className={`${styles.pageRequisitesContent}`}>
-                            <div className={`${styles.pageRequisitesContentText}`}>Банковские реквизиты</div>
-                            <div className={`${styles.pageRequisitesContentDesc}`}></div>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -251,42 +225,21 @@ export default function Contacts() {
                       <div className={`${styles.pageDocumentsTitle}`}>
                         <span className={`${styles.titleBig}`}>Документы компании</span>
                       </div>
-                      <a href="/documents/act-ventilation.pdf" target="_blank" className={`${styles.cDocumentsInner}`}>
-                        <div className={`${styles.cDocumentsContainer}`}>
-                          <div className={`${styles.cDocumentsContainerIcon}`}>
-                            <svg width="38" height="52" viewBox="0 0 38 52" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                  d="M37.7 13.897L24.104.3a1.021 1.021 0 0 0-.723-.3H4.22A4.225 4.225 0 0 0 0 4.22v43.25a4.225 4.225 0 0 0 4.22 4.22h29.56A4.225 4.225 0 0 0 38 47.47V14.62c0-.271-.108-.531-.3-.723zM24.403 3.487l10.11 10.11H26.58a2.18 2.18 0 0 1-2.177-2.176V3.488zM35.957 47.47a2.18 2.18 0 0 1-2.177 2.177H4.22a2.18 2.18 0 0 1-2.177-2.177V4.22c0-1.2.977-2.176 2.177-2.176h18.139v9.378a4.225 4.225 0 0 0 4.22 4.22h9.378V47.47z"
-                                  fill="var(--theme-main)">
-                              </path>
-                              <path
-                                  d="M27.173 25.947H10.828a1.022 1.022 0 0 0 0 2.043h16.345a1.021 1.021 0 1 0 0-2.043zm0 4.563H10.828a1.022 1.022 0 0 0 0 2.043h16.345a1.022 1.022 0 0 0 0-2.043zm0 4.562H10.828a1.022 1.022 0 0 0 0 2.043h16.345a1.021 1.021 0 1 0 0-2.043zm-5.313 4.563H10.829a1.022 1.022 0 0 0 0 2.043h11.033a1.021 1.021 0 1 0 0-2.043z"
-                                  fill="var(--theme-main)">
-                              </path>
-                            </svg>
-                          </div>
-                          <div className={`${styles.cDocumentsContent}`}>
-                            <div className={`${styles.cDocumentsContentText}`}>
-                              <span>
-                                Акт обследования технического состояния вентиляции
-                              </span>
-                            </div>
-                            <div className={`${styles.cDocumentsDownload}`}>
-                              <span className={`${styles.cDocumentsDownloadFormat}`}>.pdf, 806,0 Кб</span>
-                              <div className={`${styles.cDocumentsDownloadCircle}`}>
-                                <svg viewBox="0 0 10 16" width="10" height="12" fill="none"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                      d="M5.533 15.047l4.215-4.215a.746.746 0 0 0 0-1.058.746.746 0 0 0-1.059 0L5.753 12.71V1.485a.752.752 0 1 0-1.505 0v11.22L1.312 9.767a.746.746 0 0 0-1.059 0 .746.746 0 0 0 0 1.058l4.215 4.215c.147.147.337.22.533.22a.74.74 0 0 0 .532-.214z"
-                                      fill="rgba(var(--theme-accent-rgb), .6)">
-                                  </path>
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </a>
+                      <DocumentFile documentName={'act-ventilation.pdf'}
+                                    documentTitle={'Акт обследования технического состояния вентиляции'}>
+                      </DocumentFile>
+                      <DocumentFile documentName={'heating_season_readiness_check.pdf'}
+                                    documentTitle={'Акт проверки готовности к отопительному периоду 2025/2026 гг.'}>
+                      </DocumentFile>
+                      <DocumentFile documentName={'heating_readiness_addendum.pdf'}
+                                    documentTitle={'Приложение к акту проверки готовности к отопительному периоду 2025/2026 гг.'}>
+                      </DocumentFile>
+                      <DocumentFile documentName={'thermal_energy_inspection_report.pdf'}
+                                    documentTitle={'Акт проверки узла учета тепловой энергии и теплоносителя'}>
+                      </DocumentFile>
+                      <DocumentFile documentName={'certificate_FTA.pdf'}
+                                    documentTitle={'Свидетельство о регистрации юр. лица в ФНС'}>
+                      </DocumentFile>
                     </div>
                   </section>
                 </div>

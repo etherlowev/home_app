@@ -35,7 +35,7 @@ function Header ({pathName}: HeaderProps ) {
             <a href="/" className={styles.logo} data-ref="logo">
               <img
                   src="/img/logo.png"
-                  alt="ТСЖ &quot;Ватутина 18-2&quot;" className={styles.logoIcon}
+                  alt="ТСЖ &quot;Ватутина, 18-2&quot;" className={styles.logoIcon}
               />
             </a>
             <nav className={styles.mainMenu} data-ref="main-menu">
@@ -81,7 +81,7 @@ function Header ({pathName}: HeaderProps ) {
                 <div className={styles.headerPhones}>
                   <div className={styles.headerPhone}>
                     <span className={styles.headerPhoneTitle}>Диспетчерская</span>
-                    <a href="tel:8 495 737 45 17">8 495 737 45 17</a>
+                    <a href="tel:84957374517">8 495 737 45 17</a>
                     <svg className={styles.headerPhoneIcon} viewBox="0 0 19 18" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                       <path fill="var(--theme-accent)"

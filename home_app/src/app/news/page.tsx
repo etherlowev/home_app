@@ -15,7 +15,7 @@ export default function Home() {
             <div className={`${styles.newsHeader}`}>
               <div className={`${styles.content}`}>
                 <h1 className={`${styles.newsTitle}`}>
-                  Новости компании ТСЖ "Ватутина 18-2" и важные сообщения жильцам
+                  Новости компании ТСЖ "Ватутина, 18-2" и важные сообщения жильцам
                 </h1>
               </div>
             </div>

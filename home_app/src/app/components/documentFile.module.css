@@ -1,0 +1,100 @@
+.cDocumentsInner {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.cDocumentsContainer {
+    background: #fff;
+    box-shadow: 0 2px 4px #e2e7ee;
+    border-radius: 6px;
+    padding: 14px 25px;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.cDocumentsContent {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.cDocumentsContentText {
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--theme-accent);
+    padding-left: 22px;
+}
+
+.cDocumentsDownload {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.cDocumentsDownloadFormat {
+    color: rgba(var(--theme-accent-rgb),.6);
+    line-height: 18px;
+    font-weight: 500;
+    padding: 0 12px;
+    white-space: nowrap;
+}
+
+.cDocumentsDownloadCircle, .cPaging {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.cDocumentsDownloadCircle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid rgba(var(--theme-accent-rgb),.6);
+    padding: 6px;
+}
+
+@media (min-width: 640px) and (max-width: 979px) {
+    .pageDocumentsTitle {
+        padding: 0 0 0 15px;
+    }
+
+    .aboutCompanyPage {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 639px) {
+    .cDocumentsInner {
+        margin: 0;
+    }
+
+    .cDocumentsContainer {
+        border-radius: 0;
+        box-shadow: none;
+        padding-bottom: 0;
+    }
+
+    .pageAboutHeaderHeadline {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 979px) {
+    .pageDocumentsDesktop {
+        display: none;
+    }
+
+    .cDocumentsContainerIcon svg {
+        width: 30px;
+        height: 40px;
+    }
+}

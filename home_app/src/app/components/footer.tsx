@@ -82,9 +82,7 @@ const Footer: React.FC = (): JSX.Element => {
             </span>
           </div>
           <div className={`${styles.box} ${styles.desktop9} ${styles.laptop8}`}>
-            <div className={styles.right}>
-
-
+            <div className={`${styles.right}`}>
               <a href="tel: 8 495 788 45 17" className={`${styles.footerContact} ${styles.footerContactPhone}`}>
                 <div className={styles.footerContactInner}>
                   <div className={styles.footerContactTitle}>по всем вопросам</div>
