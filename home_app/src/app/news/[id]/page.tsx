@@ -35,7 +35,7 @@ export default function Page() {
 
   return (
       <div>
-        <Header pathName={"/none"}/>
+        <Header pathName={"/news"}/>
         <div>
           <main id="page-content" className={`${styles.pageContent} ${styles.newsArticlePage}`}>
             <div className={`${styles.newsArticle}`}>

@@ -9,7 +9,7 @@ export default function Home() {
   
   return (
       <div>
-        <Header pathName={"/privacy"}/>
+        <Header pathName={"/user-agreement"}/>
         <div>
           <main id="page-content" className={`${styles.pageContent} ${styles.newsArticlePage}`}>
             <div className={`${styles.newsArticle}`}>

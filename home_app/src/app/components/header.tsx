@@ -115,11 +115,11 @@ function Header ({pathName}: HeaderProps ) {
       <div id="mainMenuMobile" className={styles.mainMenuMobile} hidden={true}>
         <nav className={styles.mainMenu}>
           <ul>
-            <li><a href="/" className={styles.active}>Главная</a></li>
-            <li><a href="/news" className="">Новости</a></li>
-            <li><a href="/about" className="">ТСЖ</a></li>
-            <li><a href="/for-tenants" className="">Жителям</a></li>
-            <li><a href="/contacts" className="">Контакты</a></li>
+            <li><a href="/" className={selectedNav("/")}>Главная</a></li>
+            <li><a href="/news" className={selectedNav("/news")}>Новости</a></li>
+            <li><a href="/about" className={selectedNav("/about")}>ТСЖ</a></li>
+            <li><a href="/for-tenants" className={selectedNav("/for-tenants")}>Жителям</a></li>
+            <li><a href="/contacts" className={selectedNav("/contacts")}>Контакты</a></li>
           </ul>
         </nav>
         <div className={styles.headerPhones}>
