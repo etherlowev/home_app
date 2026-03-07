@@ -1,15 +1,15 @@
 import { pool } from '@/app/lib/client';
-import {NextRequest, NextResponse} from "next/server";
+import {NextResponse} from "next/server";
 
-export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+export async function GET() {
     let client = null;
-    const { id } = await params;
+
     try {
         client = await pool.connect();
         const query = {
-            name: 'fetch-news-by-id',
-            text: 'SELECT id, title, text, date_posted FROM news WHERE id = $1 LIMIT 1',
-            values: [id],
+            name: 'fetch-news-by-page',
+            text: 'SELECT id, title, text, date_posted FROM news ORDER BY date_posted DESC LIMIT 10',
+            values: [],
         };
         const result = await client.query(query);
         return NextResponse.json({"success": true, "rows": result.rows});

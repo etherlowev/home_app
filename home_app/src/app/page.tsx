@@ -1,14 +1,26 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
 import Modal from './components/modal';
 import ConfirmationModal from './components/confirmation';
 import styles from "./index.module.css";
 import './globals.css'
+import NewsModel from "@/app/model/NewsModel";
+
+const formatDate = (dateString: string): string => {
+  const date = new Date(dateString);
+  return new Intl.DateTimeFormat('ru-RU', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    timeZone: 'Europe/Moscow'
+  }).format(date);
+};
 
 export default function Home() {
+  const [data, setData] = useState<NewsModel[]>([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [confirmationModalOpen, setConfirmationModalOpen] = useState(false);
 
@@ -23,6 +35,33 @@ export default function Home() {
     await response.json();
     setModalOpen(false);
   };
+
+  useEffect(() => {
+    fetch('/api/get-news/')
+        .then((res) => res.json())
+        .then((json) => {
+          if (json.success) {
+            let rows = json.rows;
+            let news = [];
+
+            for (let i = 0 ; i < rows.length ; i++) {
+              let item = rows[i];
+              news.push(new NewsModel(
+                  item.id,
+                  item.title,
+                  item.text,
+                  formatDate(item.date_posted)
+              ));
+            }
+            setData(news);
+          }
+          else {
+            setData([]);
+          }
+        })
+        .catch((error) => console.log('Fetch failed:', error))
+        .finally(() => console.log());
+  }, []);
 
   return (
     <div>
@@ -885,19 +924,21 @@ export default function Home() {
                     </h2>
                     <a href="/news" className={`${styles.btn} ${styles.btnHollow}`}>Открыть все</a>
                   </div>
-                  <div className={`${styles.box} ${styles.tablet6} ${styles.laptop3}`}>
-                    <div className={`${styles.new}`}>
-                      <h3 className={`${styles.newTitle}`}>
-                        Плановое отключение ГВС с 01.08.2025 по 11.08.2025
-                      </h3>
-                      <div className={`${styles.newText}`}>
-                        <p>
-                          14.07.2025
-                        </p>
+                  {data.map(item => (
+                      <div key={item.id} className={`${styles.box} ${styles.tablet6} ${styles.laptop3}`}>
+                        <div className={`${styles.new}`}>
+                          <h3 className={`${styles.newTitle}`}>
+                            {item.title}
+                          </h3>
+                          <div className={`${styles.newText}`}>
+                            <p>
+                              {item.date_posted}
+                            </p>
+                          </div>
+                          <a href={`/news/${item.id}`} className={`${styles.newLink}`}>Читать полностью</a>
+                        </div>
                       </div>
-                      <a href="/news/1" className={`${styles.newLink}`}>Читать полностью</a>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
