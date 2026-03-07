@@ -144,6 +144,10 @@
     padding: 0 28px 22px;
 }
 
+.cModal .cCaptcha {
+    margin-top: 60px;
+}
+
 .cModal .cModalPolicy {
     display: -ms-flexbox;
     display: flex;

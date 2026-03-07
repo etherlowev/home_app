@@ -4,17 +4,21 @@ import React, { useState } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
 import Modal from './components/modal';
+import ConfirmationModal from './components/confirmation';
 import styles from "./index.module.css";
 import './globals.css'
 
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [confirmationModalOpen, setConfirmationModalOpen] = useState(false);
 
-  const handleSubmit = async (topic: string, email:string, body:string, phone:string | undefined, agreed:boolean) => {
+  const handleSubmit = async (topic: string, email:string,
+                              body:string, phone:string | undefined,
+                              agreed:boolean, token:string) => {
     const response = await fetch('/api/send-email', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({topic, email, body, phone, agreed}),
+      body: JSON.stringify({topic, email, body, phone, agreed, token}),
     });
     await response.json();
     setModalOpen(false);
@@ -904,7 +908,14 @@ export default function Home() {
       <Modal
           isOpen={modalOpen}
           onClose={() => setModalOpen(false)}
-          onSend={e => handleSubmit(e.topic, e.email, e.body, e.phone, e.agreed)}/>
+          onSend={e => {
+            handleSubmit(e.topic, e.email, e.body, e.phone, e.agreed, e.token);
+            setConfirmationModalOpen(true)
+          }}
+      />
+      <ConfirmationModal isOpen={confirmationModalOpen}
+                         onClose={() => setConfirmationModalOpen(false)}
+                         message={"Ваше сообщение успешно отправлено. Мы свяжемся с вами в самое ближайшее время."} />
     </div>
   );
 }

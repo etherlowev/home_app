@@ -13,11 +13,12 @@
     "accordion-js": "^3.4.1",
     "dotenv": "^17.2.3",
     "motion": "^12.23.24",
-    "next": "16.1.0-canary.17",
+    "next": "16.1.5",
     "nodemailer": "7.0.11",
     "pg": "^8.16.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-phone-number-input": "^3.4.12",
     "toastify-js": "^1.12.0",
     "viewerjs": "^1.11.7"
@@ -28,6 +29,7 @@
     "@types/nodemailer": "^7.0.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/react-google-recaptcha": "^2.1.9",
     "google": "link:next/font/google",
     "tailwindcss": "^4",
     "typescript": "^5"

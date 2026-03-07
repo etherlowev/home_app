@@ -24,11 +24,15 @@ export default function Page() {
     fetch('/api/get-news/'+newsId)
         .then((res) => res.json())
         .then((json) => {
-          setData(json);
-          setLoading(false);
-          console.log(json);
+          if (json.success) {
+              setData(json.rows);
+          }
+          else {
+              setData([]);
+          }
         })
-        .catch(() => setLoading(false));
+        .catch(() => null)
+        .finally(() => setLoading(false));
   }, []);
 
   if (loading) return <p>Загрузка...</p>;
@@ -42,14 +46,14 @@ export default function Page() {
               <div className={`${styles.newsArticleHeader}`}>
                 <div className={`${styles.content}`}>
                   <h1 className={`${styles.newsArticleTitle}`}>
-                    {data[0].title}
+                    {data.length != 0 && data[0].title}
                   </h1>
                 </div>
               </div>
               <div className={`${styles.newsArticleContent}`}>
                 <div className={`${styles.content}`}>
                   <div className={`${styles.cCard} ${styles.oTypographer}`}>
-                    {data[0].text}
+                    {data.length != 0 && data[0].text}
                   </div>
                 </div>
               </div>

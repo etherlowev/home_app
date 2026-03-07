@@ -1,14 +1,22 @@
 "use client";
-import React, { useState, FC } from "react";
+import React, {useState, FC, useRef} from "react";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import styles from "./modal.module.css";
 import { motion, AnimatePresence } from "motion/react";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!;
 
 interface ModalFormProps {
   isOpen: boolean;
   onClose: () => void;
-  onSend: (data: { phone: string | undefined; topic: string; body: string; email: string; agreed: boolean }) => void;
+  onSend: (data: { phone: string | undefined;
+    topic: string;
+    body: string;
+    email: string;
+    agreed: boolean;
+    token: string }) => void;
 }
 
 const backdropVariants = {
@@ -28,6 +36,7 @@ const ModalForm: FC<ModalFormProps> = ({ isOpen, onClose, onSend }) => {
   const [phone, setPhone] = useState<string | undefined>();
   const [email, setEmail] = useState<string>("");
   const [agreed, setAgreed] = useState<boolean>(false);
+  const recaptchaRef = useRef<ReCAPTCHA | null>(null);
 
   const handleSend = async () => {
     if (!agreed) {
@@ -35,6 +44,8 @@ const ModalForm: FC<ModalFormProps> = ({ isOpen, onClose, onSend }) => {
     }
     else {
       const sendButton = document.getElementById('send-button');
+      const feedbackWindow = document.getElementById('emailConfirmModal');
+
       if (sendButton == null) {
         return;
       }
@@ -43,14 +54,27 @@ const ModalForm: FC<ModalFormProps> = ({ isOpen, onClose, onSend }) => {
       if (!isValidPhoneNumber(typeof phone === "string" ? phone : "", "RU")) {
         sendButton.setAttribute("disabled", 'false');
         sendButton.classList.toggle(styles.disabled);
-        alert("Номера телефона введен некорректно. Проверьте правильность введенных данных.")
-        return
+        alert("Номера телефона введен некорректно. Проверьте правильность введенных данных.");
+        return;
       }
 
-      await onSend({topic, email, body, phone, agreed});
+      const token = await recaptchaRef.current?.executeAsync();
+      recaptchaRef.current?.reset();
+
+      if (!token) {
+        sendButton.setAttribute("disabled", 'false');
+        sendButton.classList.toggle(styles.disabled);
+        alert("Ошибка верификации Captcha")
+        return;
+      }
+
+      await onSend({topic, email, body, phone, agreed, token});
 
       sendButton.setAttribute("disabled", 'false');
       sendButton.classList.toggle(styles.disabled);
+      if (feedbackWindow) {
+        feedbackWindow.style.display = "block";
+      }
     }
   };
 
@@ -195,48 +219,22 @@ const ModalForm: FC<ModalFormProps> = ({ isOpen, onClose, onSend }) => {
                       >
                         отмена
                       </button>
-                      <button id={'send-button'} className={`${styles.btnSuccess}`} type="button" onClick={handleSend}>
+                      <button id={'send-button'} className={`${styles.btnSuccess}`} type="button"
+                              onClick={handleSend}>
                         отправить
                       </button>
                     </div>
                   </div>
+                  <div className={`${styles.cCaptcha}`}>
+                    <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={siteKey}
+                        size="invisible"
+                    />
+                  </div>
                 </form>
               </div>
             </motion.div>
-            <div id="emailConfirmModal" className={`${styles.cModal}`} data-component="email-confirm-modal">
-              <div className={`${styles.cModalBackdrop} ${styles.uFadeHalfEnter}`} data-ref="backdrop">
-              </div>
-              <div className={`${styles.cModalWrapper}`}>
-                <div className={`${styles.cModalDialog} ${styles.uModalEnter}`} data-ref="dialog">
-                  <div className={`${styles.cModalHeader}`}>
-                    <span className={`${styles.cModalHeaderTitle}`}>Обратная связь</span>
-                    <button type="button" className={`${styles.button}`} data-ref="close-btn">
-                      <svg className={`${styles.cModalHeaderClose}`} aria-hidden="true" focusable="false"
-                           data-prefix="fas"
-                           data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512">
-                        <path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19
-                                    0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48
-                                    0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48
-                                    0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28
-                                    256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28
-                                    12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28
-                                    32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
-                      </svg>
-                    </button>
-                  </div>
-                  <hr className={`${styles.cModalBand}`}/>
-                  <div className={`${styles.cModalContent}`}>
-                    Ваше сообщение успешно отправлено. Мы свяжемся с вами в самое ближайшее время.
-                  </div>
-                  <hr className={`${styles.cModalBand}`}/>
-                  <div className={`${styles.cModalFooter}`}>
-                    <button type="button" className={`${styles.button} ${styles.btnSuccess}`} data-ref="cancel-btn">
-                      понятно
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
           </motion.div>
         )}
       </AnimatePresence>

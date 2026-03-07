@@ -1,8 +1,18 @@
 import nodemailer from "nodemailer";
 
+const secret = process.env.RECAPTCHA_SECRET_KEY;
+
 export async function POST(req: Request) {
     if (req.method === 'POST') {
         const data = await req.json();
+
+        const captchaRes = await verifyCaptcha(data.token)
+
+        if (captchaRes) {
+            console.log(captchaRes);
+            return captchaRes;
+        }
+
         const transporter = nodemailer.createTransport({
             service: 'Mail.ru',
             auth: {
@@ -32,8 +42,8 @@ export async function POST(req: Request) {
                     headers: { 'Content-Type': 'application/json' },
                 });
             }
-            await transporter.sendMail(selfMailOptions);
-            await transporter.sendMail(userMailOptions);
+            //await transporter.sendMail(selfMailOptions);
+            //await transporter.sendMail(userMailOptions);
             return new Response(JSON.stringify({ message: 'Message sent successfully' }), {
                 status: 200,
                 headers: { 'Content-Type': 'application/json' },
@@ -53,4 +63,48 @@ export async function POST(req: Request) {
             headers: { 'Content-Type': 'application/json', 'Allow': 'POST' },
         });
     }
+}
+
+async function verifyCaptcha(token: string) {
+    if (!secret) {
+        return new Response(
+            JSON.stringify({ error: "Server misconfigured (no secret key)" }),
+            {
+                status: 500,
+                headers: { 'Content-Type': 'application/json' },
+            }
+        );
+    }
+    if (!token) {
+        return new Response(JSON.stringify({error: "Missing reCAPTCHA token"}), {
+            status: 400,
+            headers: { 'Content-Type': 'application/json' },
+        });
+    }
+
+    const verifyRes = await fetch(
+        `https://www.google.com/recaptcha/api/siteverify`,
+        {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams({
+                secret,
+                response: token
+            }),
+        }
+    );
+
+    const verifyData = (await verifyRes.json()) as {
+        success: boolean;
+        score?: number;
+        "error-codes"?: string[];
+    };
+
+    if (!verifyData.success) {
+        return new Response(
+            JSON.stringify({error: "Failed reCAPTCHA check", details: verifyData}),
+            {status: 400, headers: { 'Content-Type': 'application/json' }},
+        );
+    }
+    return null;
 }
