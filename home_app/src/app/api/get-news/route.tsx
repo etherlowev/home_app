@@ -8,7 +8,7 @@ export async function GET() {
         client = await pool.connect();
         const query = {
             name: 'fetch-news-by-page',
-            text: 'SELECT id, title, text, date_posted FROM news ORDER BY date_posted DESC LIMIT 10',
+            text: 'SELECT id, title, text, short_text, date_posted FROM news ORDER BY date_posted DESC LIMIT 10',
             values: [],
         };
         const result = await client.query(query);

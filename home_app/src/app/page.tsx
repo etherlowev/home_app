@@ -50,6 +50,7 @@ export default function Home() {
                   item.id,
                   item.title,
                   item.text,
+                  item.short_text,
                   formatDate(item.date_posted)
               ));
             }
@@ -932,7 +933,7 @@ export default function Home() {
                           </h3>
                           <div className={`${styles.newText}`}>
                             <p>
-                              {item.date_posted}
+                              {item.short_text}
                             </p>
                           </div>
                           <a href={`/news/${item.id}`} className={`${styles.newLink}`}>Читать полностью</a>

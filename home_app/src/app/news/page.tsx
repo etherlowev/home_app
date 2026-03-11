@@ -32,6 +32,7 @@ export default function Home() {
                   item.id,
                   item.title,
                   item.text,
+                  item.short_text,
                   formatDate(item.date_posted)
               ));
             }
@@ -47,41 +48,41 @@ export default function Home() {
 
   return (
       <div>
-        <Header pathName={"/news"}/>
-        <main id="page-content" className={`${styles.pageContent} ${styles.newsPage}`}>
-            <div className={`${styles.news}`}>
-                <div className={`${styles.newsHeader}`}>
-                    <div className={`${styles.content}`}>
-                        <h1 className={`${styles.newsTitle}`}>
-                            Новости компании ТСЖ "Ватутина, 18-2" и важные сообщения жильцам
-                        </h1>
-                    </div>
-                </div>
-                <div className={`${styles.newsContent}`}>
-                    <div className={`${styles.content}`}>
-                        <div className={`${styles.grid}`}>
-                            {data.map(item => (
-                                <div key={item.id} className={`${styles.box} ${styles.desktop4}`}>
-                                    <div className={`${styles.cNewsCard}`}>
-                                        <div className={`${styles.cNewsCardTitle}`}>
-                                            {item.title}
-                                            <div id="description" className={`${styles.cNewsCardText}`}>
-                                                <p>
-                                                    {item.date_posted}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <a href={`/news/${item.id}`} className={`${styles.cNewsCardLink}`}>
-                                            Перейти
-                                        </a>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
+          <Header pathName={"/news"}/>
+          <main id="page-content" className={`${styles.pageContent} ${styles.newsPage}`}>
+              <div className={`${styles.news}`}>
+                  <div className={`${styles.newsHeader}`}>
+                      <div className={`${styles.content}`}>
+                          <h1 className={`${styles.newsTitle}`}>
+                              Новости компании ТСЖ "Ватутина, 18-2" и важные сообщения жильцам
+                          </h1>
+                      </div>
+                  </div>
+                  <div className={`${styles.newsContent}`}>
+                      <div className={`${styles.content}`}>
+                          <div className={`${styles.grid}`}>
+                              {data.map(item => (
+                                  <div key={item.id} className={`${styles.box} ${styles.desktop4}`}>
+                                      <div className={`${styles.cNewsCard}`}>
+                                          <div className={`${styles.cNewsCardTitle}`}>
+                                              {item.title}
+                                              <div id="description" className={`${styles.cNewsCardText}`}>
+                                                  <p>
+                                                      {item.short_text}
+                                                  </p>
+                                              </div>
+                                          </div>
+                                          <a href={`/news/${item.id}`} className={`${styles.cNewsCardLink}`}>
+                                              Перейти
+                                          </a>
+                                      </div>
+                                  </div>
+                              ))}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </main>
           <Footer/>
       </div>
   );

@@ -1,5 +1,5 @@
 import styles from "./documentFile.module.css"
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 interface FileProps {
     documentName: string;
@@ -28,7 +28,7 @@ export default function DocumentFile({documentName, documentTitle}:FileProps) {
         }
     };
 
-    checkFileSize(url).then();
+    useEffect(() => {checkFileSize(url).then()}, []);
 
     return (
         <a href={`${url}`} target="_blank" className={`${styles.cDocumentsInner}`}>

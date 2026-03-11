@@ -8,7 +8,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
         client = await pool.connect();
         const query = {
             name: 'fetch-news-by-id',
-            text: 'SELECT id, title, text, date_posted FROM news WHERE id = $1 LIMIT 1',
+            text: 'SELECT id, title, text, short_text, date_posted FROM news WHERE id = $1 LIMIT 1',
             values: [id],
         };
         const result = await client.query(query);
