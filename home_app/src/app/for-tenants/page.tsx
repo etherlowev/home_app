@@ -14,6 +14,13 @@ export default function Home() {
     useEffect(() => {
         setData([
             {
+                id: 3,
+                documentName: "activity_report_2025.xlsx",
+                title: "Отчет о деятельности за 2025 год",
+                text: "Уважаемые собственники! Просим Вас " +
+                    "ознакомиться с отчетом о деятельности за 2025 год. ",
+            },
+            {
                 id: 2,
                 documentName: "notification_24_03_2026.pdf",
                 title: "Уведомление о проведении внеочередного общего собрания собственников помещений",
